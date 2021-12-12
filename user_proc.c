@@ -15,7 +15,7 @@
 struct msgqueue{
 
     long int msgtype;
-    char msgcontent[8];
+    char msgcontent[20];
 };
 
 int resourceMessageID; unsigned int ossclkid, *ossclockaddr, *osstimesec, *osstimensec;
@@ -30,6 +30,22 @@ int main(int argc, char *argv[]){
 
     ossclkid = shmget(ossclockkey, 8, 0); //gets the id of the shared memory clock
     ossclockaddr = shmat(ossclkid, NULL, 0); //shmat returns the address of the shared memory
+
+    int memoryAddress, memoryPermission, masterPID; 
+    char memoryAddressToString[6], memoryPermissionToString[2], completeMemoryAddress[20], permission[6], userPIDToSTring[7], masterPIDToString[7];
+
+    struct msgqueue resourceMessageChild;    //to communicate memory request and termination messages with the master
+
+    masterPID = getppid(); //get the parent process ID
+
+    sprintf(masterPIDToString, "%d", masterPID);    //converts user masterPID from int to string
+
+    sprintf(userPIDToSTring, "%d", getpid());    //converts user pid from int to string
+
+    int msgsnderror, msgrcverror; char msgreceived[20];
+
+    resourceMessageID = msgget(message_queue_key, 0);
+
     if (ossclockaddr == (void *) -1){
 
         perror("\nuser process cannot attach to ossclock");
@@ -40,30 +56,47 @@ int main(int argc, char *argv[]){
     osstimesec = ossclockaddr + 0;   //the first 4 bytes of the address stores the seconds part of the oss clock, note the total address space is for 8 bytes from shmget above
     osstimensec = ossclockaddr + 1;   //the second 4 bytes of the address stores the seconds part of the oss clock
 
-    struct msgqueue resourceMessageChild;    //to communicate memory request and termination messages with the master
-
-    int msgsnderror, msgrcverror; char msgreceived[8];
-
-    resourceMessageID = msgget(message_queue_key, 0);
-    
-    strcpy(resourceMessageChild.msgcontent, "33780 1");    //copies user_rname into message content
-
-    resourceMessageChild.msgtype = getpid();    //initialize msgtype with user process' PID
-
-    msgsnderror = msgsnd(resourceMessageID, &resourceMessageChild, sizeof(resourceMessageChild), 0);
-
-    if (msgsnderror == -1){ //error checking msgsnd()
-
-        perror("\nError: In user_proc(). msgsnd() failed!");
-
-        exit(1);
-    }
-
-    printf("\nUser Process %d is requesting memory address %s from Master at %hu:%hu\n", getpid(), resourceMessageChild.msgcontent, *osstimesec, *osstimensec);
-
-    sleep(10);
+    printf("\nppid() inside user process is %d\n", getppid());
 
     while(1){
+
+        strcpy(completeMemoryAddress, ""); strcpy(permission, "");
+
+        memoryAddress = ((randomNumber(0, 32))*1024) + randomNumber(0,1023);    //generate memory address
+
+        memoryPermission = randomNumber(0,1); //generate memory read/write permission
+
+        if (memoryPermission == 0){     //set read/write permission
+
+            strcpy(permission, "read");
+        }
+
+        else
+            strcpy(permission, "write");
+
+        sprintf(memoryAddressToString, "%d", memoryAddress);    //converts memory address from int to string
+
+        sprintf(memoryPermissionToString, "%d", memoryPermission); //convert memory permission from int to string
+
+        strcat(completeMemoryAddress, userPIDToSTring); strcat(completeMemoryAddress, " "); strcat(completeMemoryAddress, memoryAddressToString); 
+        strcat(completeMemoryAddress, " "); strcat(completeMemoryAddress, memoryPermissionToString); //construct a message like "PID1234 0x1234 1"    
+        
+        strcpy(resourceMessageChild.msgcontent, completeMemoryAddress);    //copies memory address into message content
+
+        resourceMessageChild.msgtype = masterPID;    //initialize msgtype with PID of master so only master can read it
+
+        msgsnderror = msgsnd(resourceMessageID, &resourceMessageChild, sizeof(resourceMessageChild), 0);
+
+        if (msgsnderror == -1){ //error checking msgsnd()
+
+            perror("\nError: In user_proc(). msgsnd() failed!");
+
+            exit(1);
+        }
+
+        printf("\nUser Process %d is requesting memory address %d and %s permission from Master at %hu:%hu\n", getpid(), memoryAddress, permission, *osstimesec, *osstimensec);
+
+        sleep(10);
 
         msgrcverror = msgrcv(resourceMessageID, &resourceMessageChild, sizeof(resourceMessageChild), getpid(), 0); //receive message back from master
 
@@ -77,38 +110,56 @@ int main(int argc, char *argv[]){
 
         if (strcmp(msgreceived, "0") == 0){    //if resource not granted
 
-            printf("\nResource not granted by Master...User Process %d exiting\n", getpid());
+            printf("\nMemory access not granted by Master...User Process %d in blocked state\n", getpid());
 
-            exit(1);
+            //implement blocked state condition here, keep waiting to receive a memory resource grant
+                while(1){
+
+                    msgrcverror = msgrcv(resourceMessageID, &resourceMessageChild, sizeof(resourceMessageChild), getpid(), 0); //receive message back from master  
+
+                    if (msgrcverror == -1){ //error checking msgrcverror()
+
+                        perror("\nError: In user_proc() blocked state. msgrcv() failed!");
+
+                        exit(1);
+                    }
+                    if (strcmp(resourceMessageChild.msgcontent, "0") == 0)  //if still blocked
+                        continue;
+                    else
+                        break;
+                }
+                printf("\nMemory access now granted by Master...User Process %d out of blocked state\n", getpid());
         } 
 
-        else if (strcmp(msgreceived, "1") == 0)   //if resource is granted
-            break;      //break out of the loop if resource i granted
+        else if (strcmp(msgreceived, "1") == 0){ //if memory is granted
 
-        else if (strcmp(msgreceived, "33780 1") == 0){ //if you read your own message back before master could read it, reconstruct it and resend it to the queue
+            printf("\nMemory address %d with %s permission granted by Master to Process %d\n", memoryAddress, permission, getpid());
+        
+            int rnd = randomNumber(100, 1100);  //generate a random number to decide whether to terminate or continue to request memory addresses
 
-            printf("\nuser read back its own message, now writing it back\n");
+            if (rnd > 900){ //this is a condition to terminate by sending -1 as permission to oss
 
-            resourceMessageChild.msgtype = getpid();
+                strcpy(completeMemoryAddress, "");
+                strcat(completeMemoryAddress, userPIDToSTring); strcat(completeMemoryAddress, " "); strcat(completeMemoryAddress, "00000"); strcat(completeMemoryAddress, " ");
+                strcat(completeMemoryAddress, "-1");    //construct a special termination message
 
-            strcpy(resourceMessageChild.msgcontent, "33780 1");    //copies user_rname into message content
+                resourceMessageChild.msgtype = masterPID; strcpy(resourceMessageChild.msgcontent, completeMemoryAddress);
 
-            msgsnderror = msgsnd(resourceMessageID, &resourceMessageChild, sizeof(resourceMessageChild), 0);
+                msgsnderror = msgsnd(resourceMessageID, &resourceMessageChild, sizeof(resourceMessageChild), 0);
+                if (msgsnderror == -1){ //error checking msgsnd()
 
-            if (msgsnderror == -1){ //error checking msgsnd()
+                    perror("\nError: In user_proc(). msgsnd() failed!");
 
-                perror("\nError: In user_proc(). msgsnd() failed!");
-
-                exit(1);
+                    exit(1);
+                }
+                printf("\nprocess %d is terminating at %hu:%hu\n", getpid(), *osstimesec, *osstimensec);
+                break;
             }
-
-            continue;
+            else
+                continue;
         }
-    }   
-
-    printf("\nResource %s granted by Master to Process %d\n", "33780 1", getpid());
+    }
 
     printf("\nProcess %d completed user process execution\n", getpid());
-
     return 0;
 }

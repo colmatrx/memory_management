@@ -23,8 +23,29 @@
 struct msgqueue{
 
     long int msgtype;   //to store processID
-    char msgcontent[8]; //to store address and read/write bit
+    char msgcontent[20]; //to store address and read/write bit
 };
+
+struct processControlBlock{ //process control block
+
+    int pID;
+    int pageNumber[32];
+    int dirtyBit[32];
+    int numberOfMemoryRequest;
+    int numOfMemoryPagefault; //resulting in blocked state and page fault
+    int numOfMemoryGranted;
+};
+
+/*struct processPageTable{    //struct to keep page table
+    
+    int pID;
+    int pageNumber[32];
+    int dirtyBit[32];
+};*/
+
+int frameNumber[256];   //frame table to simulate main memory
+int framepermissionFlag[256]; //to track memory access permissions; 0 for read, 1 for write
+int blockedQueue[18];   //to store blocked processes
 
 int memoryRequestMessageQueueID;  //message queue ID
 
@@ -48,11 +69,11 @@ char *logfilename = "logfile.log"; char logstring[4096];
 
 int main(int argc, char *argv[]){   //start of main() function
 
-    int msgrcverr, msgsnderr; char memoryRequest[8]; char resourceReturnCopy[15]; 
+    int msgrcverr, msgsnderr; char memoryRequest[20]; char resourceMessageCopy[20]; char permission[15];
 
-    char *resourceNum, *resourceID; char *firstToken, *secondToken, *thirdToken;
+    char *resourceNum, *resourceID; char *userIDToken, *memoryAddressToken, *permissionToken;
 
-    long int mtype; int pid;
+    long int mtype; int pid; int pidIndex;
 
     signal(SIGINT, siginthandler); //handles Ctrl+C signal inside OSS only     
 
@@ -73,8 +94,15 @@ int main(int argc, char *argv[]){   //start of main() function
         perror("\noss: Error: In oss main function, ossclockid cannot be created; shmget() call failed");
         exit(1);
     }
+    snprintf(logstring, sizeof(logstring), "\nMaster clock initializing at 0:0\n");
+
+    logmsg(logfilename, logstring); //calling logmsg() to write to file
 
     initclock(); //calls function to initialize the oss seconds and nanoseconds clocks
+
+    snprintf(logstring, sizeof(logstring), "\nMaster clock completed initialization at %hu:%hu\n", *osstimeseconds, *osstimenanoseconds+=200);
+
+    logmsg(logfilename, logstring); //calling logmsg() to write to file
 
     printf("\nMaster clock initialized at %hu:%hu\n", *osstimeseconds, *osstimenanoseconds); //print out content of ossclock after initialization
 
@@ -99,7 +127,7 @@ int main(int argc, char *argv[]){   //start of main() function
 
     printf("%s", logstring);
     
-   // for (int count = 0; count < max_number_of_processes; count++){       //randomly create user processes in this block
+    for (int count = 0; count < 2; count++){       //randomly create user processes in this block
 
         pid = fork();
 
@@ -127,23 +155,21 @@ int main(int argc, char *argv[]){   //start of main() function
         *osstimenanoseconds+=randomTime;    //increment oss nanosecond by randomTime
 
         printf("\nMaster created User Process %d at %hu:%hu\n", pid, *osstimeseconds, *osstimenanoseconds);
-    //}
-    
-    
+    }  
 
     while (1){
 
-        printf("\nMaster waiting for resource request or release\n");
+        printf("\nMaster listening for memory request or process termination\n");
 
-        mtype = 0;
+        mtype = 0; strcpy(permission, "");
 
-        snprintf(logstring, sizeof(logstring), "\nMaster listening for resource request/release at %hu:%hu\n", *osstimeseconds+=1, *osstimenanoseconds);
+        snprintf(logstring, sizeof(logstring), "\nMaster: Listening for Memory Access Requests %hu:%hu\n", *osstimeseconds+=1, *osstimenanoseconds);
 
         logmsg(logfilename, logstring); //calling logmsg() to write to file
 
         //sleep(2);
 
-        msgrcverr = msgrcv(memoryRequestMessageQueueID, &userMemoryRequest, sizeof(userMemoryRequest), 0, 0); //read from message queue without waiting
+        msgrcverr = msgrcv(memoryRequestMessageQueueID, &userMemoryRequest, sizeof(userMemoryRequest), getpid(), 0); //read master's from message queue without waiting
 
         if (msgrcverr == -1){ //error checking msgrcverror()
 
@@ -152,31 +178,52 @@ int main(int argc, char *argv[]){   //start of main() function
 
             //break;
         }
+        //decode the message content to extract the user processID, memory address and permission
 
-        printf("\nMaster received signal from message queue\n");
+        printf("\nMaster received memory request from message queue\n");
 
-        mtype = userMemoryRequest.msgtype; //store message type received above; shoudl be the user processID
+        strcpy(resourceMessageCopy, userMemoryRequest.msgcontent);    //copy the memory address and r/w bit
 
-        strcpy(memoryRequest, userMemoryRequest.msgcontent);    //copy the memory address and r/w bit
+        userIDToken = strtok(resourceMessageCopy, " "); memoryAddressToken = strtok(NULL, " "); permissionToken = strtok(NULL, " "); //extract the message tokens from msgcontent
+        //strcpy(memoryRequest, memoryAddressToken);
 
-        if ((strcmp(memoryRequest, "0") == 0) || (strcmp(memoryRequest, "1") == 0)){  //if master reads back its own message, then it should write it back and continue listening
+        if (strtol(permissionToken, NULL, 10) == 0){
 
-            printf("\nmaster read back its own message, now writing it back\n");
-            userMemoryRequest.msgtype = mtype; strcpy(userMemoryRequest.msgcontent, memoryRequest);
-            msgsnderr = msgsnd(memoryRequestMessageQueueID, &userMemoryRequest, sizeof(userMemoryRequest), IPC_NOWAIT);
-            continue;
+            strcpy(permission, "read");
+            snprintf(logstring, sizeof(logstring), "\nMaster: PID %s is requesting %s of memory address %s at %hu:%hu\n", userIDToken, permission, memoryAddressToken, *osstimeseconds, *osstimenanoseconds+=5);
+            logmsg(logfilename, logstring); //calling logmsg() to write to file
+        }
+        else if(strtol(permissionToken, NULL, 10) == 1){
+
+            strcpy(permission, "write");
+            snprintf(logstring, sizeof(logstring), "\nMaster: PID %s is requesting %s of memory address %s at %hu:%hu\n", userIDToken, permission, memoryAddressToken, *osstimeseconds, *osstimenanoseconds+=5);
+            logmsg(logfilename, logstring); //calling logmsg() to write to file
         }
 
-        printf("Inside Master, message type is %d and message content is %s\n", mtype, memoryRequest);
+        else if(strtol(permissionToken, NULL, 10) == -1){
 
-        userMemoryRequest.msgtype = mtype; stpcpy(userMemoryRequest.msgcontent, "1");
+            strcpy(permission, "termination");
+            snprintf(logstring, sizeof(logstring), "\nMaster: PID %s is informing Master of its termination at %hu:%hu\n", userIDToken, *osstimeseconds, *osstimenanoseconds+=5);
+            logmsg(logfilename, logstring); //calling logmsg() to write to file
+            kill(strtol(userIDToken,NULL,10), SIGKILL); //handle clearing of PCB and Frame table here
+            continue;
+        }        
+
+        mtype = strtol(userIDToken, NULL, 10); //store message type extracted above as int; shoudl be the user processID    
+
+        printf("\nInside master, user PID is %d, memory requested is %s and permission token is %s\n", mtype, memoryAddressToken, permissionToken);
+
+        userMemoryRequest.msgtype = mtype; strcpy(userMemoryRequest.msgcontent, "1");
 
         printf("oss sending message type %d and message content %s to user process\n", userMemoryRequest.msgtype, userMemoryRequest.msgcontent);
 
         sleep(10);
 
-        msgsnderr = msgsnd(memoryRequestMessageQueueID, &userMemoryRequest, sizeof(userMemoryRequest), IPC_NOWAIT);   //send message granted to user process        
-        
+        msgsnderr = msgsnd(memoryRequestMessageQueueID, &userMemoryRequest, sizeof(userMemoryRequest), IPC_NOWAIT);   //send message granted to user process  
+
+        snprintf(logstring, sizeof(logstring), "\nMaster: Memory request for address %s was granted to PID %s at %hu:%hu\n", memoryAddressToken, userIDToken, *osstimeseconds, *osstimenanoseconds+=3);
+
+        logmsg(logfilename, logstring); //calling logmsg() to write to file      
     }
 
     //cleanUp();      //call cleanup before exiting main() to free up used resources*/
