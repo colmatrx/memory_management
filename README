@@ -1,5 +1,5 @@
 #########################   AUTHOR: IDRIS ADELEKE #######################
-                            CS4760 PROJECT 5 SUBMITTED DECEMBER 1, 2021
+                            CS4760 PROJECT 6 SUBMITTED DECEMBER 15, 2021
 
 This program is compiled with the command 'make clean'.
 This program is run by calling oss in this format: ./oss
@@ -7,63 +7,3 @@ This program is run by calling oss in this format: ./oss
 oss in turn randomly creates 18 user processes. 
 
 These user processes simultaneously execute 'user_proc' which requests from and release resources to the oss using message queue.
-
-Resources are of types R0 to R19.
-
-oss initializes the resource table by creating random instances of each process R0 to R19.
-
-user processes request random instances of different processes in the format <int n> R<int n> for example '5 R2'
-
-oss requires user processes to requests total instances of their resources at once.
-
-oss runs a deadlock avoidance algorithm by checking if there are enough resources to meet the user process request.
-
-If oss denies a user process, it goes ahead to terminate it.
-
-If oss grants a user request, it waits for it to release the resources after use.
-
-Each time a request is granted or released, oss updates and logs the resource availability and resource allocation tables.
-
-The resource allocation table is of format "R1 -> P0(2) P3(5)" where P0 and P3 are user process IDs and the numbers in bracket are the instances of R1 granted to the processes
-
-***********************
-Resource Construction
-***********************
-
-oss generates a random number between 1 and 20 and prepend it to each resource class to create a resource type 13 R0 to 7 R19
-
-user_proc generates 2 random numbers between 1 and 20. One random number prepends the resource class while the other appends it to create for example 8 R5 (8 instances of R5)
-
-These random numbers were varied during simulation to demonstrate deadlock avoidance and print out changes in resource allocation table.
-
-*************************
-Primitives Used
-*************************
-
-User process sends instances of resources to the oss as a request for example 7 R10 (7 instances of resource R10)
-
-oss replies with a '1' to indicate resource is granted and '-1' for resource denied
-
-If resource was denied, user process terminates
-
-If resource is granted, user process keeps generating random numbers to simulate using of the resources. Once it generates the same number as the number of instances it requested, then it is done using the resources and proceed to release them.
-
-To release the resources, user process prepends the request with the keyword "return" to make the message look like "return 7 R10", and goes on to exit execution.
-
-Once oss reads the word return, it updates the resource resource availability and resource allocation tables with the number of resources released.
-
-***************************
-Config.h
-***************************
-
-The number of processes can be varied by modifying "max_number_of_processes" in config.h. The default is 18 processes.
-
-oss timeout can be varied by modifying "oss_run_timeout" in config.h. The default is 180 seconds
-
-Note that with these defaults, oss may be caught by the timeout signal. In this case, cleanUp() function is called and all system resources will be released before oss terminates.
-
-Ctrl+C interrupt is also caught and resources are also freed in such case.
-
-oss successfully completes execution if all user processes have either been terminated or have released their resources and there are no more processes making requests.
-
-For higher probability of seeing oss run to completion, you may also vary the instances of resources requested by modifying the "randomResourceNum" variable in user_proc.c
