@@ -28,23 +28,22 @@ struct msgqueue{
 
 struct processControlBlock{ //process control block
 
-    int pID;
-    int pageNumber[32];
-    int dirtyBit[32];
-    int numberOfMemoryRequest;
-    int numOfMemoryPagefault; //resulting in blocked state and page fault
-    int numOfMemoryGranted;
+    int pID;    //default is 0
+    int numberOfMemoryRequest;  //default is 0
+    int numOfMemoryPagefault; //resulting in blocked state and page fault deafult is 0
+    int pageNumber[32]; //default is -1
+    int dirtyBit[32];   //default is 0 
 };
+struct processControlBlock pageTable[max_number_of_processes];  //process and page table for 18 processes
 
-/*struct processPageTable{    //struct to keep page table
-    
-    int pID;
-    int pageNumber[32];
-    int dirtyBit[32];
-};*/
+struct frame{
+int frameIndex[256];   //frame table to simulate main memory; all initialized to -1
+int framePermission[256]; //to track memory access permissions; 0 for read, 1 for write; all initialized to -1
+int frameFIFO[256];    //to track the FIFI index for swapping
+};
+struct frame frameTable;
 
-int frameNumber[256];   //frame table to simulate main memory
-int framepermissionFlag[256]; //to track memory access permissions; 0 for read, 1 for write
+
 int blockedQueue[18];   //to store blocked processes
 
 int memoryRequestMessageQueueID;  //message queue ID
@@ -59,6 +58,8 @@ void siginthandler(int);    //handles Ctrl+C interrupt
 
 void timeouthandler(int sig);   //timeout handler function declaration
 
+void displayFrameTable(void);
+
 unsigned int ossclockid, *ossclockaddress, *osstimeseconds, *osstimenanoseconds; //used for ossclock shared memory
 
 unsigned int ossofflinesecondclock; unsigned int ossofflinenanosecondclock; //used as offline clock before detaching from the oss clock shared memory
@@ -69,17 +70,39 @@ char *logfilename = "logfile.log"; char logstring[4096];
 
 int main(int argc, char *argv[]){   //start of main() function
 
-    int msgrcverr, msgsnderr; char memoryRequest[20]; char resourceMessageCopy[20]; char permission[15];
+    int msgrcverr, msgsnderr, pageRequest = -1; char memoryRequest[20]; char resourceMessageCopy[20]; char permission[15];
 
     char *resourceNum, *resourceID; char *userIDToken, *memoryAddressToken, *permissionToken;
 
-    long int mtype; int pid; int pidIndex;
+    long int mtype; int pid; int pidIndex; int fifoCount = 0;
 
     signal(SIGINT, siginthandler); //handles Ctrl+C signal inside OSS only     
 
     signal(SIGALRM, timeouthandler); //handles the timeout signal
 
     alarm(oss_run_timeout); //fires timeout alarm after oss_run_timeout seconds defined in the config.h file
+
+    //initiallize the process table and page table here
+    for (int index = 0; index < max_number_of_processes; index++){
+
+        pageTable[index].pID = 0;
+        pageTable[index].numberOfMemoryRequest = 0;
+        pageTable[index].numOfMemoryPagefault = 0;
+
+        for(int i = 0; i < 32; i++){    //initialize the page table and corresponding page dirty bit
+            pageTable[index].pageNumber[i] = -1;
+            pageTable[index].dirtyBit[i] = 0;
+        }
+    }
+
+    //initialize frame table here
+
+    for (int i = 0; i < 256; i++){
+
+        frameTable.frameIndex[i] = -1;
+        frameTable.framePermission[i] = -1;
+        frameTable.frameFIFO[i] = 0;
+    }
 
     struct msgqueue userMemoryRequest;    //to communicate memory request and termination messages with the user process
 
@@ -138,7 +161,7 @@ int main(int argc, char *argv[]){   //start of main() function
 
         if (pid > 0){
 
-            pid = pid;
+            pageTable[count].pID = pid; //set the pid in the process_page table
         }
 
         if (pid == 0){  //child process was created
@@ -159,15 +182,15 @@ int main(int argc, char *argv[]){   //start of main() function
 
     while (1){
 
+        displayFrameTable();
+
         printf("\nMaster listening for memory request or process termination\n");
 
-        mtype = 0; strcpy(permission, "");
+        mtype = 0; strcpy(permission, ""); int memoryAddressTokenInt = -1; pageRequest = -1; int permissionTokenInt = -1; int frameNumber;
 
         snprintf(logstring, sizeof(logstring), "\nMaster: Listening for Memory Access Requests %hu:%hu\n", *osstimeseconds+=1, *osstimenanoseconds);
 
         logmsg(logfilename, logstring); //calling logmsg() to write to file
-
-        //sleep(2);
 
         msgrcverr = msgrcv(memoryRequestMessageQueueID, &userMemoryRequest, sizeof(userMemoryRequest), getpid(), 0); //read master's from message queue without waiting
 
@@ -175,8 +198,6 @@ int main(int argc, char *argv[]){   //start of main() function
 
             perror("\nMaster in oss main() function. msgrcv() failed!");
             exit(1);
-
-            //break;
         }
         //decode the message content to extract the user processID, memory address and permission
 
@@ -185,7 +206,12 @@ int main(int argc, char *argv[]){   //start of main() function
         strcpy(resourceMessageCopy, userMemoryRequest.msgcontent);    //copy the memory address and r/w bit
 
         userIDToken = strtok(resourceMessageCopy, " "); memoryAddressToken = strtok(NULL, " "); permissionToken = strtok(NULL, " "); //extract the message tokens from msgcontent
-        //strcpy(memoryRequest, memoryAddressToken);
+
+        //calculate the page referenced from the memory address
+        memoryAddressTokenInt = strtol(memoryAddressToken, NULL, 10);
+        pageRequest = memoryAddressTokenInt / 1024; //gets the Page that holds the main memory frame address
+
+        permissionTokenInt = strtol(permissionToken, NULL, 10); //converts permissionToken to int
 
         if (strtol(permissionToken, NULL, 10) == 0){
 
@@ -209,21 +235,82 @@ int main(int argc, char *argv[]){   //start of main() function
             continue;
         }        
 
-        mtype = strtol(userIDToken, NULL, 10); //store message type extracted above as int; shoudl be the user processID    
+        mtype = strtol(userIDToken, NULL, 10); //converts the user process ID to int    
 
-        printf("\nInside master, user PID is %d, memory requested is %s and permission token is %s\n", mtype, memoryAddressToken, permissionToken);
+        //find the page number here
+        for (int i = 0; i < max_number_of_processes; i++){  //traverse the process table to find the pid and the requested Page
 
-        userMemoryRequest.msgtype = mtype; strcpy(userMemoryRequest.msgcontent, "1");
+            if (pageTable[i].pID == mtype){ //true if pid is found in process table    
+                pageTable[i].numberOfMemoryRequest+=1;  //increment the number of times process has requested memory access
 
-        printf("oss sending message type %d and message content %s to user process\n", userMemoryRequest.msgtype, userMemoryRequest.msgcontent);
+                if (pageTable[i].pageNumber[pageRequest] == -1){ //if page number does not contain any Frame number ie page fault
 
-        sleep(10);
+                    pageTable[i].numOfMemoryPagefault+=1;   //increment the number of times process has had a page fault
 
-        msgsnderr = msgsnd(memoryRequestMessageQueueID, &userMemoryRequest, sizeof(userMemoryRequest), IPC_NOWAIT);   //send message granted to user process  
+                    //this is a page fault condition, block the process here and perform a page swap
+                    userMemoryRequest.msgtype = mtype; strcpy(userMemoryRequest.msgcontent, "0");
 
-        snprintf(logstring, sizeof(logstring), "\nMaster: Memory request for address %s was granted to PID %s at %hu:%hu\n", memoryAddressToken, userIDToken, *osstimeseconds, *osstimenanoseconds+=3);
+                    sleep(5);
 
-        logmsg(logfilename, logstring); //calling logmsg() to write to file      
+                    msgsnderr = msgsnd(memoryRequestMessageQueueID, &userMemoryRequest, sizeof(userMemoryRequest), IPC_NOWAIT);   //send message granted to user process
+                    
+                    snprintf(logstring, sizeof(logstring), "\nMaster: Page Fault; Memory Address %s not in Frame Table; Process %s is considered blocked at %hu:%hu\n", memoryAddressToken, userIDToken, *osstimeseconds, *osstimenanoseconds+=1);
+
+                    logmsg(logfilename, logstring); //calling logmsg() to write to file
+
+                    //now scan the frame table for available slot to simulate memory access
+                    for (int frameNumber = 0; frameNumber < 256; frameNumber++){   //find an available frame in Frame Table ie no swapping
+
+                        if (frameTable.frameIndex[frameNumber] == -1){      //true for an empty frame
+
+                            frameTable.frameIndex[frameNumber] = pageTable[i].pID;  //store the calling processID in the frame to simulate which process is using it
+                            frameTable.framePermission[frameNumber] = permissionTokenInt;   //store read/write permission for the frame
+                            frameTable.frameFIFO[frameNumber] = fifoCount++;  //to track the order in which frames are filled to use for FIFO swapping
+                            pageTable[i].pageNumber[pageRequest] = frameNumber; //keep the main memory frame number in the process page table index
+                            pageTable[i].dirtyBit[pageRequest] = permissionTokenInt; //store the permission; 1 indicates dirtyBit is set                            
+
+                                snprintf(logstring, sizeof(logstring), "\nMaster: Empty Frame found, no sawpping needed; Fetching data from secondary storage at %hu:%hu\n", *osstimeseconds, *osstimenanoseconds);
+
+                                logmsg(logfilename, logstring); //calling logmsg() to write to file
+
+                                userMemoryRequest.msgtype = mtype; strcpy(userMemoryRequest.msgcontent, "1");
+                                msgsnderr = msgsnd(memoryRequestMessageQueueID, &userMemoryRequest, sizeof(userMemoryRequest), IPC_NOWAIT);   //send message granted to user process
+                                snprintf(logstring, sizeof(logstring), "\n Master: %s permission granted to PID %s on memory address %s in Frame %d at %hu:%hu\n", permission, userIDToken, memoryAddressToken, frameNumber, *osstimeseconds, *osstimenanoseconds+=14);
+
+                                logmsg(logfilename, logstring); //calling logmsg() to write to file
+                            
+                                break; //break out of the loop once an empty frame is found
+                        }
+
+                        else{   //if no empty frame is found
+
+                                //implement frame swapping here
+                        }
+                    }
+                }   //end of page fault if block
+
+                else{   //no page fault; page table contains the frame of the main memory address
+
+                        userMemoryRequest.msgtype = mtype; strcpy(userMemoryRequest.msgcontent, "1");
+
+                        printf("No Page fault; Master sending message type %d and message content %s to user process\n", userMemoryRequest.msgtype, userMemoryRequest.msgcontent);
+
+                        sleep(5);
+
+                        msgsnderr = msgsnd(memoryRequestMessageQueueID, &userMemoryRequest, sizeof(userMemoryRequest), IPC_NOWAIT);   //send message granted to user process  
+
+                        snprintf(logstring, sizeof(logstring), "\nMaster: Master to PID %s -> Memory Address %s is in Frame %d at %hu:%hu\n", userIDToken, memoryAddressToken, pageTable[i].pageNumber[pageRequest],  *osstimeseconds, *osstimenanoseconds+=10);
+
+                        logmsg(logfilename, logstring); //calling logmsg() to write to file 
+
+                        break;  //break out of the for loop if page has been found with the frame number inside  
+                }   //end of page fault else block
+
+                break;
+            }
+            
+        }
+
     }
 
     //cleanUp();      //call cleanup before exiting main() to free up used resources*/
@@ -363,3 +450,24 @@ void timeouthandler(int sig){   //this function is called if the program times o
     exit(1);
 
 }   //end of timeouthandler()
+
+void displayFrameTable(void){   //function to display the frame table
+
+    strcpy(logstring, "");
+    snprintf(logstring, sizeof(logstring), "\nMaster Updating Resource Availability Table at %hu:%hu\n\n", *osstimeseconds, *osstimenanoseconds);
+    logmsg(logfilename, logstring); //calling logmsg() to write to file
+
+    strcpy(logstring, "");
+    strcat(logstring, "|Frame Index|\t\t"); strcat(logstring, "|Frame Owner|\t\t"); strcat(logstring, "|Frame Permission|\n");
+    logmsg(logfilename, logstring); //calling logmsg() to write to file
+
+    strcpy(logstring, "");
+    for (int i = 0; i < 256; i++){
+
+        
+
+
+
+    }
+
+}

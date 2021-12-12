@@ -24,7 +24,7 @@ int resourceMessageID; unsigned int ossclkid, *ossclockaddr, *osstimesec, *ossti
 
 /* Submitted December 15, 2021*/
 
-//This is the user_proc application that gets called by the execl command inside oss child processes
+//This is the user_proc application that gets called by the execl command inside oss when a child process is successfully forked
 
 int main(int argc, char *argv[]){
 
@@ -62,7 +62,7 @@ int main(int argc, char *argv[]){
 
         strcpy(completeMemoryAddress, ""); strcpy(permission, "");
 
-        memoryAddress = ((randomNumber(0, 32))*1024) + randomNumber(0,1023);    //generate memory address
+        memoryAddress = ((randomNumber(0, 31))*1024) + randomNumber(0,1023);    //generate memory address
 
         memoryPermission = randomNumber(0,1); //generate memory read/write permission
 
