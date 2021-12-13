@@ -904,3 +904,5491 @@ Master Clock Shared Memory ID 32805 has been detached and deleted at 8:50202
 Master removed Messaqe Queue ID 46 at 8:50217
 
 Master terminating at 9:50232
+
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:41416
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+
+Master: Listening for Memory Access Requests 2:41416
+
+Master: PID 30479 is requesting read of memory address 28847 at 2:41421
+
+Master: Page Fault; Memory Address 28847 not in Frame Table; Process 30479 is considered blocked at 2:41422
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:41422
+
+ Master: read permission granted to PID 30479 on memory address 28847 in Frame 0 at 2:41436
+
+Master Displaying Frame Table at 2:41436
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30479				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+
+Master: Listening for Memory Access Requests 3:41436
+
+Master: PID 30481 is requesting read of memory address 16308 at 3:41441
+
+Master: Page Fault; Memory Address 16308 not in Frame Table; Process 30481 is considered blocked at 3:41442
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:41442
+
+ Master: read permission granted to PID 30481 on memory address 16308 in Frame 1 at 3:41456
+
+Master Displaying Frame Table at 3:41456
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30479				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+
+Master: Listening for Memory Access Requests 4:41456
+
+Master: PID 30479 is requesting read of memory address 20134 at 4:41461
+
+Master: Page Fault; Memory Address 20134 not in Frame Table; Process 30479 is considered blocked at 4:41462
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 4:41462
+
+ Master: read permission granted to PID 30479 on memory address 20134 in Frame 2 at 4:41476
+
+Master Displaying Frame Table at 4:41476
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30479				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+
+Master: Listening for Memory Access Requests 5:41476
+
+Master: PID 30481 is requesting write of memory address 6686 at 5:41481
+
+Master: Page Fault; Memory Address 6686 not in Frame Table; Process 30481 is considered blocked at 5:41482
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 5:41482
+
+ Master: write permission granted to PID 30481 on memory address 6686 in Frame 3 at 5:41496
+
+Master Displaying Frame Table at 5:41496
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30479				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+-1				
+
+Master: Listening for Memory Access Requests 6:41496
+
+Master: PID 30479 is requesting write of memory address 22537 at 6:41501
+
+Master in Signal Handler; Ctrl+C interrupt received at 7:41501
+
+Master cleaning up resources at 7:41506
+
+Master stopping all pending user processes at 7:41508
+
+Master stopped all pending user processes at 9:41518
+
+Master Clock Shared Memory ID 32827 has been detached and deleted at 10:41543
+
+Master removed Messaqe Queue ID 47 at 10:41558
+
+Master terminating at 11:41573
+
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:65480
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+-1				
+-1				
+
+Master: Listening for Memory Access Requests 2:65480
+
+Master: PID 30587 is requesting write of memory address 10016 at 2:65485
+
+Master: Page Fault; Memory Address 10016 not in Frame Table; Process 30587 is considered blocked at 2:65486
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:65486
+
+ Master: write permission granted to PID 30587 on memory address 10016 in Frame 0 at 2:65500
+
+Master Displaying Frame Table at 2:65500
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30587				
+
+Master: Listening for Memory Access Requests 3:65500
+
+Master: PID 30600 is requesting write of memory address 67 at 3:65505
+
+Master: Page Fault; Memory Address 67 not in Frame Table; Process 30600 is considered blocked at 3:65506
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:65506
+
+ Master: write permission granted to PID 30600 on memory address 67 in Frame 1 at 3:65520
+
+Master Displaying Frame Table at 3:65520
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30587				
+
+Master: Listening for Memory Access Requests 4:65520
+
+Master: PID 30587 is requesting read of memory address 26966 at 4:65525
+
+Master: Page Fault; Memory Address 26966 not in Frame Table; Process 30587 is considered blocked at 4:65526
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 4:65526
+
+ Master: read permission granted to PID 30587 on memory address 26966 in Frame 2 at 4:4
+
+Master Displaying Frame Table at 4:4
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30587				
+
+Master: Listening for Memory Access Requests 5:4
+
+Master: PID 30600 is requesting read of memory address 22722 at 5:9
+
+Master: Page Fault; Memory Address 22722 not in Frame Table; Process 30600 is considered blocked at 5:10
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 5:10
+
+ Master: read permission granted to PID 30600 on memory address 22722 in Frame 3 at 5:24
+
+Master Displaying Frame Table at 5:24
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30587				
+
+Master: Listening for Memory Access Requests 6:24
+
+Master: PID 30587 is requesting read of memory address 28471 at 6:29
+
+Master: Page Fault; Memory Address 28471 not in Frame Table; Process 30587 is considered blocked at 6:30
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 6:30
+
+ Master: read permission granted to PID 30587 on memory address 28471 in Frame 4 at 6:44
+
+Master Displaying Frame Table at 6:44
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30587				
+
+Master: Listening for Memory Access Requests 7:44
+
+Master: PID 30600 is requesting read of memory address 23876 at 7:49
+
+Master: Page Fault; Memory Address 23876 not in Frame Table; Process 30600 is considered blocked at 7:50
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 7:50
+
+ Master: read permission granted to PID 30600 on memory address 23876 in Frame 5 at 7:64
+
+Master Displaying Frame Table at 7:64
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30587				
+
+Master: Listening for Memory Access Requests 8:64
+
+Master: PID 30587 is requesting read of memory address 3545 at 8:69
+
+Master in Signal Handler; Ctrl+C interrupt received at 9:69
+
+Master cleaning up resources at 9:74
+
+Master stopping all pending user processes at 9:76
+
+Master stopped all pending user processes at 11:86
+
+Master Clock Shared Memory ID 12 has been detached and deleted at 12:111
+
+Master removed Messaqe Queue ID 48 at 12:126
+
+Master terminating at 13:141
+
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:38856
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+-1				
+-1				
+-1				
+
+Master: Listening for Memory Access Requests 2:38856
+
+Master: PID 30647 is requesting write of memory address 28478 at 2:38861
+
+Master: Page Fault; Memory Address 28478 not in Frame Table; Process 30647 is considered blocked at 2:38862
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:38862
+
+ Master: write permission granted to PID 30647 on memory address 28478 in Frame 0 at 2:38876
+
+Master Displaying Frame Table at 2:38876
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30647				
+
+Master: Listening for Memory Access Requests 3:38876
+
+Master: PID 30660 is requesting read of memory address 31719 at 3:38881
+
+Master: Page Fault; Memory Address 31719 not in Frame Table; Process 30660 is considered blocked at 3:38882
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:38882
+
+ Master: read permission granted to PID 30660 on memory address 31719 in Frame 1 at 3:38896
+
+Master Displaying Frame Table at 3:38896
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30647				
+
+Master: Listening for Memory Access Requests 4:38896
+
+Master: PID 30647 is requesting read of memory address 6179 at 4:38901
+
+Master: Page Fault; Memory Address 6179 not in Frame Table; Process 30647 is considered blocked at 4:38902
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 4:38902
+
+ Master: read permission granted to PID 30647 on memory address 6179 in Frame 2 at 4:38916
+
+Master Displaying Frame Table at 4:38916
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30647				
+
+Master: Listening for Memory Access Requests 5:38916
+
+Master: PID 30660 is requesting write of memory address 3710 at 5:38921
+
+Master: Page Fault; Memory Address 3710 not in Frame Table; Process 30660 is considered blocked at 5:38922
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 5:38922
+
+ Master: write permission granted to PID 30660 on memory address 3710 in Frame 3 at 5:38936
+
+Master Displaying Frame Table at 5:38936
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30647				
+
+Master: Listening for Memory Access Requests 6:38936
+
+Master: PID 30647 is requesting read of memory address 18501 at 6:38941
+
+Master in Signal Handler; Ctrl+C interrupt received at 7:38941
+
+Master cleaning up resources at 7:38946
+
+Master stopping all pending user processes at 7:38948
+
+Master stopped all pending user processes at 9:38958
+
+Master Clock Shared Memory ID 17 has been detached and deleted at 10:38983
+
+Master removed Messaqe Queue ID 49 at 10:38998
+
+Master terminating at 11:39013
+
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:27336
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+-1				
+-1				
+-1				
+
+Master: Listening for Memory Access Requests 2:27336
+
+Master: PID 30792 is requesting read of memory address 19242 at 2:27341
+
+Master: Page Fault; Memory Address 19242 not in Frame Table; Process 30792 is considered blocked at 2:27342
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:27342
+
+ Master: read permission granted to PID 30792 on memory address 19242 in Frame 0 at 2:27356
+
+Master Displaying Frame Table at 2:27356
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30792				
+
+Master: Listening for Memory Access Requests 3:27356
+
+Master: PID 30793 is requesting read of memory address 10724 at 3:27361
+
+Master: Page Fault; Memory Address 10724 not in Frame Table; Process 30793 is considered blocked at 3:27362
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:27362
+
+ Master: read permission granted to PID 30793 on memory address 10724 in Frame 1 at 3:27376
+
+Master Displaying Frame Table at 3:27376
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30792				
+
+Master: Listening for Memory Access Requests 4:27376
+
+Master: PID 30792 is requesting write of memory address 26984 at 4:27381
+
+Master: Page Fault; Memory Address 26984 not in Frame Table; Process 30792 is considered blocked at 4:27382
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 4:27382
+
+ Master: write permission granted to PID 30792 on memory address 26984 in Frame 2 at 4:27396
+
+Master Displaying Frame Table at 4:27396
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30792				
+
+Master: Listening for Memory Access Requests 5:27396
+
+Master: PID 30793 is requesting read of memory address 9195 at 5:27401
+
+Master in Signal Handler; Ctrl+C interrupt received at 6:27401
+
+Master cleaning up resources at 6:27406
+
+Master stopping all pending user processes at 6:27408
+
+Master stopped all pending user processes at 8:27418
+
+Master Clock Shared Memory ID 28 has been detached and deleted at 9:27443
+
+Master removed Messaqe Queue ID 50 at 9:27458
+
+Master terminating at 10:27473
+
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:968
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+-1				
+-1				
+-1				
+
+Master: Listening for Memory Access Requests 2:968
+
+Master: PID 30890 is requesting write of memory address 18639 at 2:973
+
+Master: Page Fault; Memory Address 18639 not in Frame Table; Process 30890 is considered blocked at 2:974
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:974
+
+ Master: write permission granted to PID 30890 on memory address 18639 in Frame 0 at 2:988
+
+Master Displaying Frame Table at 2:988
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30890				
+
+Master: Listening for Memory Access Requests 3:988
+
+Master: PID 30892 is requesting write of memory address 15439 at 3:993
+
+Master: Page Fault; Memory Address 15439 not in Frame Table; Process 30892 is considered blocked at 3:994
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:994
+
+ Master: write permission granted to PID 30892 on memory address 15439 in Frame 1 at 3:1008
+
+Master Displaying Frame Table at 3:1008
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30890				
+
+Master: Listening for Memory Access Requests 4:1008
+
+Master: PID 30890 is requesting write of memory address 11644 at 4:1013
+
+Master: Page Fault; Memory Address 11644 not in Frame Table; Process 30890 is considered blocked at 4:1014
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 4:1014
+
+ Master: write permission granted to PID 30890 on memory address 11644 in Frame 2 at 4:1028
+
+Master Displaying Frame Table at 4:1028
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30890				
+
+Master: Listening for Memory Access Requests 5:1028
+
+Master: PID 30892 is requesting write of memory address 29639 at 5:1033
+
+Master in Signal Handler; Ctrl+C interrupt received at 6:1033
+
+Master cleaning up resources at 6:1038
+
+Master stopping all pending user processes at 6:1040
+
+Master stopped all pending user processes at 8:1050
+
+Master Clock Shared Memory ID 36 has been detached and deleted at 9:1075
+
+Master removed Messaqe Queue ID 51 at 9:1090
+
+Master terminating at 10:1105
+
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:46792
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+-1				
+-1				
+-1				
+
+Master: Listening for Memory Access Requests 2:46792
+
+Master: PID 30930 is requesting read of memory address 7453 at 2:46797
+
+Master: Page Fault; Memory Address 7453 not in Frame Table; Process 30930 is considered blocked at 2:46798
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:46798
+
+ Master: read permission granted to PID 30930 on memory address 7453 in Frame 0 at 2:46812
+
+Master Displaying Frame Table at 2:46812
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30930				
+
+Master: Listening for Memory Access Requests 3:46812
+
+Master: PID 30932 is requesting write of memory address 30520 at 3:46817
+
+Master: Page Fault; Memory Address 30520 not in Frame Table; Process 30932 is considered blocked at 3:46818
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:46818
+
+ Master: write permission granted to PID 30932 on memory address 30520 in Frame 1 at 3:46832
+
+Master Displaying Frame Table at 3:46832
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30930				
+
+Master: Listening for Memory Access Requests 4:46832
+
+Master: PID 30930 is requesting write of memory address 24630 at 4:46837
+
+Master: Page Fault; Memory Address 24630 not in Frame Table; Process 30930 is considered blocked at 4:46838
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 4:46838
+
+ Master: write permission granted to PID 30930 on memory address 24630 in Frame 2 at 4:46852
+
+Master Displaying Frame Table at 4:46852
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30930				
+
+Master: Listening for Memory Access Requests 5:46852
+
+Master: PID 30932 is requesting write of memory address 23133 at 5:46857
+
+Master: Page Fault; Memory Address 23133 not in Frame Table; Process 30932 is considered blocked at 5:46858
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 5:46858
+
+ Master: write permission granted to PID 30932 on memory address 23133 in Frame 3 at 5:46872
+
+Master Displaying Frame Table at 5:46872
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30930				
+
+Master: Listening for Memory Access Requests 6:46872
+
+Master: PID 30930 is requesting write of memory address 17080 at 6:46877
+
+Master: Page Fault; Memory Address 17080 not in Frame Table; Process 30930 is considered blocked at 6:46878
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 6:46878
+
+ Master: write permission granted to PID 30930 on memory address 17080 in Frame 4 at 6:46892
+
+Master Displaying Frame Table at 6:46892
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30930				
+
+Master: Listening for Memory Access Requests 7:46892
+
+Master: PID 30932 is requesting write of memory address 25317 at 7:46897
+
+Master: Page Fault; Memory Address 25317 not in Frame Table; Process 30932 is considered blocked at 7:46898
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 7:46898
+
+ Master: write permission granted to PID 30932 on memory address 25317 in Frame 5 at 7:46912
+
+Master Displaying Frame Table at 7:46912
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30930				
+
+Master: Listening for Memory Access Requests 8:46912
+
+Master: PID 30930 is requesting write of memory address 19805 at 8:46917
+
+Master: Page Fault; Memory Address 19805 not in Frame Table; Process 30930 is considered blocked at 8:46918
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 8:46918
+
+ Master: write permission granted to PID 30930 on memory address 19805 in Frame 6 at 8:46932
+
+Master Displaying Frame Table at 8:46932
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30930				
+
+Master: Listening for Memory Access Requests 9:46932
+
+Master: PID 30932 is requesting write of memory address 29945 at 9:46937
+
+Master: Master to PID 30932 -> Memory Address 29945 is in Frame 1 at 9:46947
+
+Master Displaying Frame Table at 9:46947
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30930				
+
+Master: Listening for Memory Access Requests 10:46947
+
+Master: PID 30930 is requesting read of memory address 1146 at 10:46952
+
+Master: Page Fault; Memory Address 1146 not in Frame Table; Process 30930 is considered blocked at 10:46953
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 10:46953
+
+ Master: read permission granted to PID 30930 on memory address 1146 in Frame 7 at 10:46967
+
+Master Displaying Frame Table at 10:46967
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+30930				
+
+Master: Listening for Memory Access Requests 11:46967
+
+Master: PID 30932 is requesting write of memory address 14943 at 11:46972
+
+Master in Signal Handler; Ctrl+C interrupt received at 12:46972
+
+Master cleaning up resources at 12:46977
+
+Master stopping all pending user processes at 12:46979
+
+Master stopped all pending user processes at 14:46989
+
+Master Clock Shared Memory ID 37 has been detached and deleted at 15:47014
+
+Master removed Messaqe Queue ID 52 at 15:47029
+
+Master terminating at 16:47044
+
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:31432
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+-1-1-1
+Master: Listening for Memory Access Requests 2:31432
+
+Master: PID 31039 is requesting write of memory address 6762 at 2:31437
+
+Master: Page Fault; Memory Address 6762 not in Frame Table; Process 31039 is considered blocked at 2:31438
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:31438
+
+ Master: write permission granted to PID 31039 on memory address 6762 in Frame 0 at 2:31452
+
+Master Displaying Frame Table at 2:31452
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+31039
+Master: Listening for Memory Access Requests 3:31452
+
+Master: PID 31040 is requesting write of memory address 10553 at 3:31457
+
+Master: Page Fault; Memory Address 10553 not in Frame Table; Process 31040 is considered blocked at 3:31458
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:31458
+
+ Master: write permission granted to PID 31040 on memory address 10553 in Frame 1 at 3:31472
+
+Master Displaying Frame Table at 3:31472
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+31039
+Master: Listening for Memory Access Requests 4:31472
+
+Master in Signal Handler; Ctrl+C interrupt received at 5:31472
+
+Master cleaning up resources at 5:31477
+
+Master stopping all pending user processes at 5:31479
+
+Master stopped all pending user processes at 7:31489
+
+Master Clock Shared Memory ID 38 has been detached and deleted at 8:31514
+
+Master removed Messaqe Queue ID 53 at 8:31529
+
+Master terminating at 9:31544
+
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:60872
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+0		-1		
+1		-1		
+2		-1		
+
+Master: Listening for Memory Access Requests 2:60872
+
+Master: PID 31161 is requesting write of memory address 8263 at 2:60877
+
+Master: Page Fault; Memory Address 8263 not in Frame Table; Process 31161 is considered blocked at 2:60878
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:60878
+
+ Master: write permission granted to PID 31161 on memory address 8263 in Frame 0 at 2:60892
+
+Master Displaying Frame Table at 2:60892
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+0		31161		write
+1		-1		write
+2		-1		write
+
+Master: Listening for Memory Access Requests 3:60892
+
+Master: PID 31162 is requesting read of memory address 7511 at 3:60897
+
+Master: Page Fault; Memory Address 7511 not in Frame Table; Process 31162 is considered blocked at 3:60898
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:60898
+
+ Master: read permission granted to PID 31162 on memory address 7511 in Frame 1 at 3:60912
+
+Master Displaying Frame Table at 3:60912
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+0		31161		write
+1		31162		read
+2		-1		read
+
+Master: Listening for Memory Access Requests 4:60912
+
+Master: PID 31161 is requesting read of memory address 4553 at 4:60917
+
+Master: Page Fault; Memory Address 4553 not in Frame Table; Process 31161 is considered blocked at 4:60918
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 4:60918
+
+ Master: read permission granted to PID 31161 on memory address 4553 in Frame 2 at 4:60932
+
+Master Displaying Frame Table at 4:60932
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+0		31161		write
+1		31162		read
+2		31161		read
+
+Master: Listening for Memory Access Requests 5:60932
+
+Master: PID 31162 is requesting read of memory address 9554 at 5:60937
+
+Master: Page Fault; Memory Address 9554 not in Frame Table; Process 31162 is considered blocked at 5:60938
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 5:60938
+
+ Master: read permission granted to PID 31162 on memory address 9554 in Frame 3 at 5:60952
+
+Master Displaying Frame Table at 5:60952
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+0		31161		write
+1		31162		read
+2		31161		read
+
+Master: Listening for Memory Access Requests 6:60952
+
+Master: PID 31161 is requesting write of memory address 31706 at 6:60957
+
+Master: Page Fault; Memory Address 31706 not in Frame Table; Process 31161 is considered blocked at 6:60958
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 6:60958
+
+ Master: write permission granted to PID 31161 on memory address 31706 in Frame 4 at 6:60972
+
+Master Displaying Frame Table at 6:60972
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+0		31161		write
+1		31162		read
+2		31161		read
+
+Master: Listening for Memory Access Requests 7:60972
+
+Master: PID 31162 is requesting read of memory address 26857 at 7:60977
+
+Master in Signal Handler; Ctrl+C interrupt received at 8:60977
+
+Master cleaning up resources at 8:60982
+
+Master stopping all pending user processes at 8:60984
+
+Master stopped all pending user processes at 10:60994
+
+Master Clock Shared Memory ID 39 has been detached and deleted at 11:61019
+
+Master removed Messaqe Queue ID 54 at 11:61034
+
+Master terminating at 12:61049
+
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:20424
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+0		-1		null
+1		-1		null
+2		-1		null
+3		-1		null
+4		-1		null
+
+Master: Listening for Memory Access Requests 2:20424
+
+Master: PID 31286 is requesting write of memory address 19271 at 2:20429
+
+Master: Page Fault; Memory Address 19271 not in Frame Table; Process 31286 is considered blocked at 2:20430
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:20430
+
+ Master: write permission granted to PID 31286 on memory address 19271 in Frame 0 at 2:20444
+
+Master Displaying Frame Table at 2:20444
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+0		31286		write
+1		-1		null
+2		-1		null
+3		-1		null
+4		-1		null
+
+Master: Listening for Memory Access Requests 3:20444
+
+Master: PID 31287 is requesting write of memory address 8145 at 3:20449
+
+Master: Page Fault; Memory Address 8145 not in Frame Table; Process 31287 is considered blocked at 3:20450
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:20450
+
+ Master: write permission granted to PID 31287 on memory address 8145 in Frame 1 at 3:20464
+
+Master Displaying Frame Table at 3:20464
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+0		31286		write
+1		31287		write
+2		-1		null
+3		-1		null
+4		-1		null
+
+Master: Listening for Memory Access Requests 4:20464
+
+Master: PID 31286 is requesting write of memory address 10650 at 4:20469
+
+Master: Page Fault; Memory Address 10650 not in Frame Table; Process 31286 is considered blocked at 4:20470
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 4:20470
+
+ Master: write permission granted to PID 31286 on memory address 10650 in Frame 2 at 4:20484
+
+Master Displaying Frame Table at 4:20484
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+0		31286		write
+1		31287		write
+2		31286		write
+3		-1		null
+4		-1		null
+
+Master: Listening for Memory Access Requests 5:20484
+
+Master: PID 31287 is requesting write of memory address 27047 at 5:20489
+
+Master: Page Fault; Memory Address 27047 not in Frame Table; Process 31287 is considered blocked at 5:20490
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 5:20490
+
+ Master: write permission granted to PID 31287 on memory address 27047 in Frame 3 at 5:20504
+
+Master Displaying Frame Table at 5:20504
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+0		31286		write
+1		31287		write
+2		31286		write
+3		31287		write
+4		-1		null
+
+Master: Listening for Memory Access Requests 6:20504
+
+Master: PID 31286 is requesting read of memory address 1540 at 6:20509
+
+Master: Page Fault; Memory Address 1540 not in Frame Table; Process 31286 is considered blocked at 6:20510
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 6:20510
+
+ Master: read permission granted to PID 31286 on memory address 1540 in Frame 4 at 6:20524
+
+Master Displaying Frame Table at 6:20524
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+0		31286		write
+1		31287		write
+2		31286		write
+3		31287		write
+4		31286		read
+
+Master: Listening for Memory Access Requests 7:20524
+
+Master: PID 31287 is requesting read of memory address 4136 at 7:20529
+
+Master: Page Fault; Memory Address 4136 not in Frame Table; Process 31287 is considered blocked at 7:20530
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 7:20530
+
+ Master: read permission granted to PID 31287 on memory address 4136 in Frame 5 at 7:20544
+
+Master Displaying Frame Table at 7:20544
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+0		31286		write
+1		31287		write
+2		31286		write
+3		31287		write
+4		31286		read
+
+Master: Listening for Memory Access Requests 8:20544
+
+Master in Signal Handler; Ctrl+C interrupt received at 9:20544
+
+Master cleaning up resources at 9:20549
+
+Master stopping all pending user processes at 9:20551
+
+Master stopped all pending user processes at 11:20561
+
+Master Clock Shared Memory ID 42 has been detached and deleted at 12:20586
+
+Master removed Messaqe Queue ID 55 at 12:20601
+
+Master terminating at 13:20616
+
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:9672
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+0				-1				null
+1				-1				null
+2				-1				null
+3				-1				null
+4				-1				null
+
+Master: Listening for Memory Access Requests 2:9672
+
+Master: PID 31344 is requesting read of memory address 13982 at 2:9677
+
+Master: Page Fault; Memory Address 13982 not in Frame Table; Process 31344 is considered blocked at 2:9678
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:9678
+
+ Master: read permission granted to PID 31344 on memory address 13982 in Frame 0 at 2:9692
+
+Master Displaying Frame Table at 2:9692
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+0				31344				read
+1				-1				null
+2				-1				null
+3				-1				null
+4				-1				null
+
+Master: Listening for Memory Access Requests 3:9692
+
+Master: PID 31357 is requesting read of memory address 31396 at 3:9697
+
+Master: Page Fault; Memory Address 31396 not in Frame Table; Process 31357 is considered blocked at 3:9698
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:9698
+
+ Master: read permission granted to PID 31357 on memory address 31396 in Frame 1 at 3:9712
+
+Master Displaying Frame Table at 3:9712
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+0				31344				read
+1				31357				read
+2				-1				null
+3				-1				null
+4				-1				null
+
+Master: Listening for Memory Access Requests 4:9712
+
+Master: PID 31344 is requesting read of memory address 29360 at 4:9717
+
+Master: Page Fault; Memory Address 29360 not in Frame Table; Process 31344 is considered blocked at 4:9718
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 4:9718
+
+ Master: read permission granted to PID 31344 on memory address 29360 in Frame 2 at 4:9732
+
+Master Displaying Frame Table at 4:9732
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+0				31344				read
+1				31357				read
+2				31344				read
+3				-1				null
+4				-1				null
+
+Master: Listening for Memory Access Requests 5:9732
+
+Master: PID 31357 is requesting read of memory address 16904 at 5:9737
+
+Master: Page Fault; Memory Address 16904 not in Frame Table; Process 31357 is considered blocked at 5:9738
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 5:9738
+
+ Master: read permission granted to PID 31357 on memory address 16904 in Frame 3 at 5:9752
+
+Master Displaying Frame Table at 5:9752
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+0				31344				read
+1				31357				read
+2				31344				read
+3				31357				read
+4				-1				null
+
+Master: Listening for Memory Access Requests 6:9752
+
+Master: PID 31344 is requesting read of memory address 1598 at 6:9757
+
+Master: Page Fault; Memory Address 1598 not in Frame Table; Process 31344 is considered blocked at 6:9758
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 6:9758
+
+ Master: read permission granted to PID 31344 on memory address 1598 in Frame 4 at 6:9772
+
+Master Displaying Frame Table at 6:9772
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+0				31344				read
+1				31357				read
+2				31344				read
+3				31357				read
+4				31344				read
+
+Master: Listening for Memory Access Requests 7:9772
+
+Master: PID 31357 is requesting read of memory address 31032 at 7:9777
+
+Master: Master to PID 31357 -> Memory Address 31032 is in Frame 1 at 7:9787
+
+Master Displaying Frame Table at 7:9787
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+0				31344				read
+1				31357				read
+2				31344				read
+3				31357				read
+4				31344				read
+
+Master: Listening for Memory Access Requests 8:9787
+
+Master in Signal Handler; Ctrl+C interrupt received at 9:9787
+
+Master cleaning up resources at 9:9792
+
+Master stopping all pending user processes at 9:9794
+
+Master stopped all pending user processes at 11:9804
+
+Master Clock Shared Memory ID 46 has been detached and deleted at 12:9829
+
+Master removed Messaqe Queue ID 56 at 12:9844
+
+Master terminating at 13:9859
+
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:41928
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+		0					-1					null
+		1					-1					null
+		2					-1					null
+		3					-1					null
+		4					-1					null
+
+Master: Listening for Memory Access Requests 2:41928
+
+Master: PID 31423 is requesting read of memory address 31966 at 2:41933
+
+Master: Page Fault; Memory Address 31966 not in Frame Table; Process 31423 is considered blocked at 2:41934
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:41934
+
+ Master: read permission granted to PID 31423 on memory address 31966 in Frame 0 at 2:41948
+
+Master Displaying Frame Table at 2:41948
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+		0					31423					read
+		1					-1					null
+		2					-1					null
+		3					-1					null
+		4					-1					null
+
+Master: Listening for Memory Access Requests 3:41948
+
+Master: PID 31424 is requesting read of memory address 31720 at 3:41953
+
+Master: Page Fault; Memory Address 31720 not in Frame Table; Process 31424 is considered blocked at 3:41954
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:41954
+
+ Master: read permission granted to PID 31424 on memory address 31720 in Frame 1 at 3:41968
+
+Master Displaying Frame Table at 3:41968
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+		0					31423					read
+		1					31424					read
+		2					-1					null
+		3					-1					null
+		4					-1					null
+
+Master: Listening for Memory Access Requests 4:41968
+
+Master: PID 31423 is requesting read of memory address 31276 at 4:41973
+
+Master in Signal Handler; Ctrl+C interrupt received at 5:41973
+
+Master cleaning up resources at 5:41978
+
+Master stopping all pending user processes at 5:41980
+
+Master stopped all pending user processes at 7:41990
+
+Master Clock Shared Memory ID 59 has been detached and deleted at 8:42015
+
+Master removed Messaqe Queue ID 57 at 8:42030
+
+Master terminating at 9:42045
+
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:21448
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+	0					-1					null
+	1					-1					null
+	2					-1					null
+	3					-1					null
+	4					-1					null
+
+Master: Listening for Memory Access Requests 2:21448
+
+Master: PID 31475 is requesting read of memory address 3954 at 2:21453
+
+Master: Page Fault; Memory Address 3954 not in Frame Table; Process 31475 is considered blocked at 2:21454
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:21454
+
+ Master: read permission granted to PID 31475 on memory address 3954 in Frame 0 at 2:21468
+
+Master Displaying Frame Table at 2:21468
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+	0					31475					read
+	1					-1					null
+	2					-1					null
+	3					-1					null
+	4					-1					null
+
+Master: Listening for Memory Access Requests 3:21468
+
+Master: PID 31488 is requesting read of memory address 18830 at 3:21473
+
+Master: Page Fault; Memory Address 18830 not in Frame Table; Process 31488 is considered blocked at 3:21474
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:21474
+
+ Master: read permission granted to PID 31488 on memory address 18830 in Frame 1 at 3:21488
+
+Master Displaying Frame Table at 3:21488
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+	0					31475					read
+	1					31488					read
+	2					-1					null
+	3					-1					null
+	4					-1					null
+
+Master: Listening for Memory Access Requests 4:21488
+
+Master: PID 31475 is requesting write of memory address 14689 at 4:21493
+
+Master: Page Fault; Memory Address 14689 not in Frame Table; Process 31475 is considered blocked at 4:21494
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 4:21494
+
+ Master: write permission granted to PID 31475 on memory address 14689 in Frame 2 at 4:21508
+
+Master Displaying Frame Table at 4:21508
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+	0					31475					read
+	1					31488					read
+	2					31475					write
+	3					-1					null
+	4					-1					null
+
+Master: Listening for Memory Access Requests 5:21508
+
+Master: PID 31488 is requesting write of memory address 1799 at 5:21513
+
+Master: Page Fault; Memory Address 1799 not in Frame Table; Process 31488 is considered blocked at 5:21514
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 5:21514
+
+ Master: write permission granted to PID 31488 on memory address 1799 in Frame 3 at 5:21528
+
+Master Displaying Frame Table at 5:21528
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+	0					31475					read
+	1					31488					read
+	2					31475					write
+	3					31488					write
+	4					-1					null
+
+Master: Listening for Memory Access Requests 6:21528
+
+Master: PID 31475 is requesting read of memory address 29454 at 6:21533
+
+Master in Signal Handler; Ctrl+C interrupt received at 7:21533
+
+Master cleaning up resources at 7:21538
+
+Master stopping all pending user processes at 7:21540
+
+Master stopped all pending user processes at 9:21550
+
+Master Clock Shared Memory ID 60 has been detached and deleted at 10:21575
+
+Master removed Messaqe Queue ID 58 at 10:21590
+
+Master terminating at 11:21605
+
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:18888
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+	0PID 					-1					null
+	1PID 					-1					null
+	2PID 					-1					null
+	3PID 					-1					null
+	4PID 					-1					null
+
+Master: Listening for Memory Access Requests 2:18888
+
+Master: PID 31575 is requesting read of memory address 1830 at 2:18893
+
+Master: Page Fault; Memory Address 1830 not in Frame Table; Process 31575 is considered blocked at 2:18894
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:18894
+
+ Master: read permission granted to PID 31575 on memory address 1830 in Frame 0 at 2:18908
+
+Master Displaying Frame Table at 2:18908
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+	0PID 					31575					read
+	1PID 					-1					null
+	2PID 					-1					null
+	3PID 					-1					null
+	4PID 					-1					null
+
+Master: Listening for Memory Access Requests 3:18908
+
+Master: PID 31588 is requesting write of memory address 6864 at 3:18913
+
+Master in Signal Handler; Ctrl+C interrupt received at 4:18913
+
+Master cleaning up resources at 4:18918
+
+Master stopping all pending user processes at 4:18920
+
+Master stopped all pending user processes at 6:18930
+
+Master Clock Shared Memory ID 32781 has been detached and deleted at 7:18955
+
+Master removed Messaqe Queue ID 59 at 7:18970
+
+Master terminating at 8:18985
+
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:48328
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+	0			PID -1			null
+	1			PID -1			null
+	2			PID -1			null
+	3			PID -1			null
+	4			PID -1			null
+
+Master: Listening for Memory Access Requests 2:48328
+
+Master: PID 31645 is requesting write of memory address 23456 at 2:48333
+
+Master: Page Fault; Memory Address 23456 not in Frame Table; Process 31645 is considered blocked at 2:48334
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:48334
+
+ Master: write permission granted to PID 31645 on memory address 23456 in Frame 0 at 2:48348
+
+Master Displaying Frame Table at 2:48348
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+	0			PID 31645			write
+	1			PID -1			null
+	2			PID -1			null
+	3			PID -1			null
+	4			PID -1			null
+
+Master: Listening for Memory Access Requests 3:48348
+
+Master: PID 31658 is requesting read of memory address 823 at 3:48353
+
+Master: Page Fault; Memory Address 823 not in Frame Table; Process 31658 is considered blocked at 3:48354
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:48354
+
+ Master: read permission granted to PID 31658 on memory address 823 in Frame 1 at 3:48368
+
+Master Displaying Frame Table at 3:48368
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+	0			PID 31645			write
+	1			PID 31658			read
+	2			PID -1			null
+	3			PID -1			null
+	4			PID -1			null
+
+Master: Listening for Memory Access Requests 4:48368
+
+Master: PID 31645 is requesting write of memory address 26117 at 4:48373
+
+Master: Page Fault; Memory Address 26117 not in Frame Table; Process 31645 is considered blocked at 4:48374
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 4:48374
+
+ Master: write permission granted to PID 31645 on memory address 26117 in Frame 2 at 4:48388
+
+Master Displaying Frame Table at 4:48388
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+	0			PID 31645			write
+	1			PID 31658			read
+	2			PID 31645			write
+	3			PID -1			null
+	4			PID -1			null
+
+Master: Listening for Memory Access Requests 5:48388
+
+Master: PID 31658 is requesting write of memory address 5415 at 5:48393
+
+Master in Signal Handler; Ctrl+C interrupt received at 6:48393
+
+Master cleaning up resources at 6:48398
+
+Master stopping all pending user processes at 6:48400
+
+Master stopped all pending user processes at 8:48410
+
+Master Clock Shared Memory ID 32791 has been detached and deleted at 9:48435
+
+Master removed Messaqe Queue ID 60 at 9:48450
+
+Master terminating at 10:48465
+
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:10952
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+	0				PID -1				null
+	1				PID -1				null
+	2				PID -1				null
+	3				PID -1				null
+	4				PID -1				null
+
+Master: Listening for Memory Access Requests 2:10952
+
+Master: PID 31729 is requesting write of memory address 11409 at 2:10957
+
+Master: Page Fault; Memory Address 11409 not in Frame Table; Process 31729 is considered blocked at 2:10958
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:10958
+
+ Master: write permission granted to PID 31729 on memory address 11409 in Frame 0 at 2:10972
+
+Master Displaying Frame Table at 2:10972
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+	0				PID 31729				write
+	1				PID -1				null
+	2				PID -1				null
+	3				PID -1				null
+	4				PID -1				null
+
+Master: Listening for Memory Access Requests 3:10972
+
+Master: PID 31742 is requesting read of memory address 17949 at 3:10977
+
+Master: Page Fault; Memory Address 17949 not in Frame Table; Process 31742 is considered blocked at 3:10978
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:10978
+
+ Master: read permission granted to PID 31742 on memory address 17949 in Frame 1 at 3:10992
+
+Master Displaying Frame Table at 3:10992
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+	0				PID 31729				write
+	1				PID 31742				read
+	2				PID -1				null
+	3				PID -1				null
+	4				PID -1				null
+
+Master: Listening for Memory Access Requests 4:10992
+
+Master in Signal Handler; Ctrl+C interrupt received at 5:10992
+
+Master cleaning up resources at 5:10997
+
+Master stopping all pending user processes at 5:10999
+
+Master stopped all pending user processes at 7:11009
+
+Master Clock Shared Memory ID 32792 has been detached and deleted at 8:11034
+
+Master removed Messaqe Queue ID 61 at 8:11049
+
+Master terminating at 9:11064
+
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:55752
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+	0					PID -1				null
+	1					PID -1				null
+	2					PID -1				null
+	3					PID -1				null
+	4					PID -1				null
+
+Master: Listening for Memory Access Requests 2:55752
+
+Master: PID 31797 is requesting read of memory address 24184 at 2:55757
+
+Master: Page Fault; Memory Address 24184 not in Frame Table; Process 31797 is considered blocked at 2:55758
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:55758
+
+ Master: read permission granted to PID 31797 on memory address 24184 in Frame 0 at 2:55772
+
+Master Displaying Frame Table at 2:55772
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+	0					PID 31797				read
+	1					PID -1				null
+	2					PID -1				null
+	3					PID -1				null
+	4					PID -1				null
+
+Master: Listening for Memory Access Requests 3:55772
+
+Master: PID 31809 is requesting read of memory address 24632 at 3:55777
+
+Master: Page Fault; Memory Address 24632 not in Frame Table; Process 31809 is considered blocked at 3:55778
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:55778
+
+ Master: read permission granted to PID 31809 on memory address 24632 in Frame 1 at 3:55792
+
+Master Displaying Frame Table at 3:55792
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+	0					PID 31797				read
+	1					PID 31809				read
+	2					PID -1				null
+	3					PID -1				null
+	4					PID -1				null
+
+Master: Listening for Memory Access Requests 4:55792
+
+Master: PID 31797 is requesting write of memory address 11625 at 4:55797
+
+Master: Page Fault; Memory Address 11625 not in Frame Table; Process 31797 is considered blocked at 4:55798
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 4:55798
+
+ Master: write permission granted to PID 31797 on memory address 11625 in Frame 2 at 4:55812
+
+Master Displaying Frame Table at 4:55812
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+	0					PID 31797				read
+	1					PID 31809				read
+	2					PID 31797				write
+	3					PID -1				null
+	4					PID -1				null
+
+Master: Listening for Memory Access Requests 5:55812
+
+Master: PID 31809 is requesting read of memory address 10001 at 5:55817
+
+Master: Page Fault; Memory Address 10001 not in Frame Table; Process 31809 is considered blocked at 5:55818
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 5:55818
+
+ Master: read permission granted to PID 31809 on memory address 10001 in Frame 3 at 5:55832
+
+Master Displaying Frame Table at 5:55832
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+	0					PID 31797				read
+	1					PID 31809				read
+	2					PID 31797				write
+	3					PID 31809				read
+	4					PID -1				null
+
+Master: Listening for Memory Access Requests 6:55832
+
+Master: PID 31797 is requesting write of memory address 15323 at 6:55837
+
+Master: Page Fault; Memory Address 15323 not in Frame Table; Process 31797 is considered blocked at 6:55838
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 6:55838
+
+ Master: write permission granted to PID 31797 on memory address 15323 in Frame 4 at 6:55852
+
+Master Displaying Frame Table at 6:55852
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+	0					PID 31797				read
+	1					PID 31809				read
+	2					PID 31797				write
+	3					PID 31809				read
+	4					PID 31797				write
+
+Master: Listening for Memory Access Requests 7:55852
+
+Master: PID 31809 is requesting write of memory address 27821 at 7:55857
+
+Master: Page Fault; Memory Address 27821 not in Frame Table; Process 31809 is considered blocked at 7:55858
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 7:55858
+
+ Master: write permission granted to PID 31809 on memory address 27821 in Frame 5 at 7:55872
+
+Master Displaying Frame Table at 7:55872
+
+|Frame Index|		|Frame Owner|		|Frame Permission|
+	0					PID 31797				read
+	1					PID 31809				read
+	2					PID 31797				write
+	3					PID 31809				read
+	4					PID 31797				write
+
+Master: Listening for Memory Access Requests 8:55872
+
+Master: PID 31797 is requesting read of memory address 6757 at 8:55877
+
+Master in Signal Handler; Ctrl+C interrupt received at 9:55877
+
+Master cleaning up resources at 9:55882
+
+Master stopping all pending user processes at 9:55884
+
+Master stopped all pending user processes at 11:55894
+
+Master Clock Shared Memory ID 32800 has been detached and deleted at 12:55919
+
+Master removed Messaqe Queue ID 62 at 12:55934
+
+Master terminating at 13:55949
+
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:52936
+
+|Frame Index|		| Frame Owner |		|Frame Permission|
+	0					PID -1				
+	1					PID -1				
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+
+Master: Listening for Memory Access Requests 2:52936
+
+Master: PID 31861 is requesting read of memory address 19717 at 2:52941
+
+Master: Page Fault; Memory Address 19717 not in Frame Table; Process 31861 is considered blocked at 2:52942
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:52942
+
+ Master: read permission granted to PID 31861 on memory address 19717 in Frame 0 at 2:52956
+
+Master Displaying Frame Table at 2:52956
+
+|Frame Index|		| Frame Owner |		|Frame Permission|
+	0					PID 31861				read
+	1					PID -1				
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+
+Master: Listening for Memory Access Requests 3:52956
+
+Master: PID 31862 is requesting write of memory address 6060 at 3:52961
+
+Master: Page Fault; Memory Address 6060 not in Frame Table; Process 31862 is considered blocked at 3:52962
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:52962
+
+ Master: write permission granted to PID 31862 on memory address 6060 in Frame 1 at 3:52976
+
+Master Displaying Frame Table at 3:52976
+
+|Frame Index|		| Frame Owner |		|Frame Permission|
+	0					PID 31861				read
+	1					PID 31862				write
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+
+Master: Listening for Memory Access Requests 4:52976
+
+Master: PID 31861 is requesting read of memory address 18029 at 4:52981
+
+Master: Page Fault; Memory Address 18029 not in Frame Table; Process 31861 is considered blocked at 4:52982
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 4:52982
+
+ Master: read permission granted to PID 31861 on memory address 18029 in Frame 2 at 4:52996
+
+Master Displaying Frame Table at 4:52996
+
+|Frame Index|		| Frame Owner |		|Frame Permission|
+	0					PID 31861				read
+	1					PID 31862				write
+	2					PID 31861				read
+	3					PID -1				
+	4					PID -1				
+
+Master: Listening for Memory Access Requests 5:52996
+
+Master: PID 31862 is requesting read of memory address 13798 at 5:53001
+
+Master: Page Fault; Memory Address 13798 not in Frame Table; Process 31862 is considered blocked at 5:53002
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 5:53002
+
+ Master: read permission granted to PID 31862 on memory address 13798 in Frame 3 at 5:53016
+
+Master Displaying Frame Table at 5:53016
+
+|Frame Index|		| Frame Owner |		|Frame Permission|
+	0					PID 31861				read
+	1					PID 31862				write
+	2					PID 31861				read
+	3					PID 31862				read
+	4					PID -1				
+
+Master: Listening for Memory Access Requests 6:53016
+
+Master: PID 31861 is requesting read of memory address 31347 at 6:53021
+
+Master: Page Fault; Memory Address 31347 not in Frame Table; Process 31861 is considered blocked at 6:53022
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 6:53022
+
+ Master: read permission granted to PID 31861 on memory address 31347 in Frame 4 at 6:53036
+
+Master Displaying Frame Table at 6:53036
+
+|Frame Index|		| Frame Owner |		|Frame Permission|
+	0					PID 31861				read
+	1					PID 31862				write
+	2					PID 31861				read
+	3					PID 31862				read
+	4					PID 31861				read
+
+Master: Listening for Memory Access Requests 7:53036
+
+Master: PID 31862 is requesting read of memory address 19536 at 7:53041
+
+Master: Page Fault; Memory Address 19536 not in Frame Table; Process 31862 is considered blocked at 7:53042
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 7:53042
+
+ Master: read permission granted to PID 31862 on memory address 19536 in Frame 5 at 7:53056
+
+Master Displaying Frame Table at 7:53056
+
+|Frame Index|		| Frame Owner |		|Frame Permission|
+	0					PID 31861				read
+	1					PID 31862				write
+	2					PID 31861				read
+	3					PID 31862				read
+	4					PID 31861				read
+
+Master: Listening for Memory Access Requests 8:53056
+
+Master: PID 31861 is requesting write of memory address 13688 at 8:53061
+
+Master: Page Fault; Memory Address 13688 not in Frame Table; Process 31861 is considered blocked at 8:53062
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 8:53062
+
+ Master: write permission granted to PID 31861 on memory address 13688 in Frame 6 at 8:53076
+
+Master Displaying Frame Table at 8:53076
+
+|Frame Index|		| Frame Owner |		|Frame Permission|
+	0					PID 31861				read
+	1					PID 31862				write
+	2					PID 31861				read
+	3					PID 31862				read
+	4					PID 31861				read
+
+Master: Listening for Memory Access Requests 9:53076
+
+Master: PID 31862 is requesting read of memory address 24719 at 9:53081
+
+Master: Page Fault; Memory Address 24719 not in Frame Table; Process 31862 is considered blocked at 9:53082
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 9:53082
+
+ Master: read permission granted to PID 31862 on memory address 24719 in Frame 7 at 9:53096
+
+Master Displaying Frame Table at 9:53096
+
+|Frame Index|		| Frame Owner |		|Frame Permission|
+	0					PID 31861				read
+	1					PID 31862				write
+	2					PID 31861				read
+	3					PID 31862				read
+	4					PID 31861				read
+
+Master: Listening for Memory Access Requests 10:53096
+
+Master: PID 31861 is requesting read of memory address 26751 at 10:53101
+
+Master: Page Fault; Memory Address 26751 not in Frame Table; Process 31861 is considered blocked at 10:53102
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 10:53102
+
+ Master: read permission granted to PID 31861 on memory address 26751 in Frame 8 at 10:53116
+
+Master Displaying Frame Table at 10:53116
+
+|Frame Index|		| Frame Owner |		|Frame Permission|
+	0					PID 31861				read
+	1					PID 31862				write
+	2					PID 31861				read
+	3					PID 31862				read
+	4					PID 31861				read
+
+Master: Listening for Memory Access Requests 11:53116
+
+Master: PID 31862 is requesting write of memory address 31918 at 11:53121
+
+Master: Page Fault; Memory Address 31918 not in Frame Table; Process 31862 is considered blocked at 11:53122
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 11:53122
+
+ Master: write permission granted to PID 31862 on memory address 31918 in Frame 9 at 11:53136
+
+Master Displaying Frame Table at 11:53136
+
+|Frame Index|		| Frame Owner |		|Frame Permission|
+	0					PID 31861				read
+	1					PID 31862				write
+	2					PID 31861				read
+	3					PID 31862				read
+	4					PID 31861				read
+
+Master: Listening for Memory Access Requests 12:53136
+
+Master: PID 31861 is requesting write of memory address 99 at 12:53141
+
+Master: Page Fault; Memory Address 99 not in Frame Table; Process 31861 is considered blocked at 12:53142
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 12:53142
+
+ Master: write permission granted to PID 31861 on memory address 99 in Frame 10 at 12:53156
+
+Master Displaying Frame Table at 12:53156
+
+|Frame Index|		| Frame Owner |		|Frame Permission|
+	0					PID 31861				read
+	1					PID 31862				write
+	2					PID 31861				read
+	3					PID 31862				read
+	4					PID 31861				read
+
+Master: Listening for Memory Access Requests 13:53156
+
+Master: PID 31862 is requesting read of memory address 4075 at 13:53161
+
+Master: Page Fault; Memory Address 4075 not in Frame Table; Process 31862 is considered blocked at 13:53162
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 13:53162
+
+ Master: read permission granted to PID 31862 on memory address 4075 in Frame 11 at 13:53176
+
+Master Displaying Frame Table at 13:53176
+
+|Frame Index|		| Frame Owner |		|Frame Permission|
+	0					PID 31861				read
+	1					PID 31862				write
+	2					PID 31861				read
+	3					PID 31862				read
+	4					PID 31861				read
+
+Master: Listening for Memory Access Requests 14:53176
+
+Master: PID 31861 is requesting write of memory address 28754 at 14:53181
+
+Master: Page Fault; Memory Address 28754 not in Frame Table; Process 31861 is considered blocked at 14:53182
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 14:53182
+
+ Master: write permission granted to PID 31861 on memory address 28754 in Frame 12 at 14:53196
+
+Master Displaying Frame Table at 14:53196
+
+|Frame Index|		| Frame Owner |		|Frame Permission|
+	0					PID 31861				read
+	1					PID 31862				write
+	2					PID 31861				read
+	3					PID 31862				read
+	4					PID 31861				read
+
+Master: Listening for Memory Access Requests 15:53196
+
+Master: PID 31862 is requesting write of memory address 19255 at 15:53201
+
+Master: Page Fault; Memory Address 19255 not in Frame Table; Process 31862 is considered blocked at 15:53202
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 15:53202
+
+ Master: write permission granted to PID 31862 on memory address 19255 in Frame 13 at 15:53216
+
+Master Displaying Frame Table at 15:53216
+
+|Frame Index|		| Frame Owner |		|Frame Permission|
+	0					PID 31861				read
+	1					PID 31862				write
+	2					PID 31861				read
+	3					PID 31862				read
+	4					PID 31861				read
+
+Master: Listening for Memory Access Requests 16:53216
+
+Master: PID 31861 is requesting write of memory address 14719 at 16:53221
+
+Master: Page Fault; Memory Address 14719 not in Frame Table; Process 31861 is considered blocked at 16:53222
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 16:53222
+
+ Master: write permission granted to PID 31861 on memory address 14719 in Frame 14 at 16:53236
+
+Master Displaying Frame Table at 16:53236
+
+|Frame Index|		| Frame Owner |		|Frame Permission|
+	0					PID 31861				read
+	1					PID 31862				write
+	2					PID 31861				read
+	3					PID 31862				read
+	4					PID 31861				read
+
+Master: Listening for Memory Access Requests 17:53236
+
+Master: PID 31862 is requesting read of memory address 32655 at 17:53241
+
+Master: Master to PID 31862 -> Memory Address 32655 is in Frame 9 at 17:53251
+
+Master Displaying Frame Table at 17:53251
+
+|Frame Index|		| Frame Owner |		|Frame Permission|
+	0					PID 31861				read
+	1					PID 31862				write
+	2					PID 31861				read
+	3					PID 31862				read
+	4					PID 31861				read
+
+Master: Listening for Memory Access Requests 18:53251
+
+Master: PID 31861 is requesting write of memory address 22515 at 18:53256
+
+Master: Page Fault; Memory Address 22515 not in Frame Table; Process 31861 is considered blocked at 18:53257
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 18:53257
+
+ Master: write permission granted to PID 31861 on memory address 22515 in Frame 15 at 18:53271
+
+Master Displaying Frame Table at 18:53271
+
+|Frame Index|		| Frame Owner |		|Frame Permission|
+	0					PID 31861				read
+	1					PID 31862				write
+	2					PID 31861				read
+	3					PID 31862				read
+	4					PID 31861				read
+
+Master: Listening for Memory Access Requests 19:53271
+
+Master: PID 31862 is requesting read of memory address 18090 at 19:53276
+
+Master in Signal Handler; Ctrl+C interrupt received at 20:53276
+
+Master cleaning up resources at 20:53281
+
+Master stopping all pending user processes at 20:53283
+
+Master stopped all pending user processes at 22:53293
+
+Master Clock Shared Memory ID 32806 has been detached and deleted at 23:53318
+
+Master removed Messaqe Queue ID 63 at 23:53333
+
+Master terminating at 24:53348
+
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:49352
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID -1				
+	1					PID -1				
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 2:49352
+
+Master: PID 31955 is requesting read of memory address 30505 at 2:49357
+
+Master: Page Fault; Memory Address 30505 not in Frame Table; Process 31955 is considered blocked at 2:49358
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:49358
+
+ Master: read permission granted to PID 31955 on memory address 30505 in Frame 0 at 2:49372
+
+Master Displaying Frame Table at 2:49372
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 31955				read
+	1					PID -1				
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 3:49372
+
+Master: PID 31956 is requesting read of memory address 10104 at 3:49377
+
+Master: Page Fault; Memory Address 10104 not in Frame Table; Process 31956 is considered blocked at 3:49378
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:49378
+
+ Master: read permission granted to PID 31956 on memory address 10104 in Frame 1 at 3:49392
+
+Master Displaying Frame Table at 3:49392
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 31955				read
+	1					PID 31956				read
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 4:49392
+
+Master: PID 31955 is requesting write of memory address 3507 at 4:49397
+
+Master: Page Fault; Memory Address 3507 not in Frame Table; Process 31955 is considered blocked at 4:49398
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 4:49398
+
+ Master: write permission granted to PID 31955 on memory address 3507 in Frame 2 at 4:49412
+
+Master Displaying Frame Table at 4:49412
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 31955				read
+	1					PID 31956				read
+	2					PID 31955				write
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 5:49412
+
+Master: PID 31956 is requesting write of memory address 19637 at 5:49417
+
+Master: Page Fault; Memory Address 19637 not in Frame Table; Process 31956 is considered blocked at 5:49418
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 5:49418
+
+ Master: write permission granted to PID 31956 on memory address 19637 in Frame 3 at 5:49432
+
+Master Displaying Frame Table at 5:49432
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 31955				read
+	1					PID 31956				read
+	2					PID 31955				write
+	3					PID 31956				write
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 6:49432
+
+Master: PID 31955 is requesting write of memory address 6652 at 6:49437
+
+Master: Page Fault; Memory Address 6652 not in Frame Table; Process 31955 is considered blocked at 6:49438
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 6:49438
+
+ Master: write permission granted to PID 31955 on memory address 6652 in Frame 4 at 6:49452
+
+Master Displaying Frame Table at 6:49452
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 31955				read
+	1					PID 31956				read
+	2					PID 31955				write
+	3					PID 31956				write
+	4					PID 31955				write
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 7:49452
+
+Master: PID 31956 is requesting read of memory address 29189 at 7:49457
+
+Master: Page Fault; Memory Address 29189 not in Frame Table; Process 31956 is considered blocked at 7:49458
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 7:49458
+
+ Master: read permission granted to PID 31956 on memory address 29189 in Frame 5 at 7:49472
+
+Master Displaying Frame Table at 7:49472
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 31955				read
+	1					PID 31956				read
+	2					PID 31955				write
+	3					PID 31956				write
+	4					PID 31955				write
+	5					PID 31956				read
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 8:49472
+
+Master: PID 31955 is requesting read of memory address 17512 at 8:49477
+
+Master: Page Fault; Memory Address 17512 not in Frame Table; Process 31955 is considered blocked at 8:49478
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 8:49478
+
+ Master: read permission granted to PID 31955 on memory address 17512 in Frame 6 at 8:49492
+
+Master Displaying Frame Table at 8:49492
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 31955				read
+	1					PID 31956				read
+	2					PID 31955				write
+	3					PID 31956				write
+	4					PID 31955				write
+	5					PID 31956				read
+	6					PID 31955				read
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 9:49492
+
+Master: PID 31956 is requesting write of memory address 8544 at 9:49497
+
+Master: Page Fault; Memory Address 8544 not in Frame Table; Process 31956 is considered blocked at 9:49498
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 9:49498
+
+ Master: write permission granted to PID 31956 on memory address 8544 in Frame 7 at 9:49512
+
+Master Displaying Frame Table at 9:49512
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 31955				read
+	1					PID 31956				read
+	2					PID 31955				write
+	3					PID 31956				write
+	4					PID 31955				write
+	5					PID 31956				read
+	6					PID 31955				read
+	7					PID 31956				write
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 10:49512
+
+Master: PID 31955 is requesting write of memory address 4010 at 10:49517
+
+Master: Master to PID 31955 -> Memory Address 4010 is in Frame 2 at 10:49527
+
+Master Displaying Frame Table at 10:49527
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 31955				read
+	1					PID 31956				read
+	2					PID 31955				write
+	3					PID 31956				write
+	4					PID 31955				write
+	5					PID 31956				read
+	6					PID 31955				read
+	7					PID 31956				write
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 11:49527
+
+Master: PID 31956 is requesting write of memory address 10777 at 11:49532
+
+Master: Page Fault; Memory Address 10777 not in Frame Table; Process 31956 is considered blocked at 11:49533
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 11:49533
+
+ Master: write permission granted to PID 31956 on memory address 10777 in Frame 8 at 11:49547
+
+Master Displaying Frame Table at 11:49547
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 31955				read
+	1					PID 31956				read
+	2					PID 31955				write
+	3					PID 31956				write
+	4					PID 31955				write
+	5					PID 31956				read
+	6					PID 31955				read
+	7					PID 31956				write
+	8					PID 31956				write
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 12:49547
+
+Master: PID 31955 is requesting read of memory address 21724 at 12:49552
+
+Master: Page Fault; Memory Address 21724 not in Frame Table; Process 31955 is considered blocked at 12:49553
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 12:49553
+
+ Master: read permission granted to PID 31955 on memory address 21724 in Frame 9 at 12:49567
+
+Master Displaying Frame Table at 12:49567
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 31955				read
+	1					PID 31956				read
+	2					PID 31955				write
+	3					PID 31956				write
+	4					PID 31955				write
+	5					PID 31956				read
+	6					PID 31955				read
+	7					PID 31956				write
+	8					PID 31956				write
+	9					PID 31955				read
+
+Master: Listening for Memory Access Requests 13:49567
+
+Master: PID 31956 is requesting read of memory address 21724 at 13:49572
+
+Master: Page Fault; Memory Address 21724 not in Frame Table; Process 31956 is considered blocked at 13:49573
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 13:49573
+
+ Master: read permission granted to PID 31956 on memory address 21724 in Frame 10 at 13:49587
+
+Master Displaying Frame Table at 13:49587
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 31955				read
+	1					PID 31956				read
+	2					PID 31955				write
+	3					PID 31956				write
+	4					PID 31955				write
+	5					PID 31956				read
+	6					PID 31955				read
+	7					PID 31956				write
+	8					PID 31956				write
+	9					PID 31955				read
+
+Master: Listening for Memory Access Requests 14:49587
+
+Master: PID 31955 is requesting read of memory address 3304 at 14:49592
+
+Master: Master to PID 31955 -> Memory Address 3304 is in Frame 2 at 14:49602
+
+Master Displaying Frame Table at 14:49602
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 31955				read
+	1					PID 31956				read
+	2					PID 31955				write
+	3					PID 31956				write
+	4					PID 31955				write
+	5					PID 31956				read
+	6					PID 31955				read
+	7					PID 31956				write
+	8					PID 31956				write
+	9					PID 31955				read
+
+Master: Listening for Memory Access Requests 15:49602
+
+Master: PID 31956 is requesting read of memory address 3304 at 15:49607
+
+Master: Page Fault; Memory Address 3304 not in Frame Table; Process 31956 is considered blocked at 15:49608
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 15:49608
+
+ Master: read permission granted to PID 31956 on memory address 3304 in Frame 11 at 15:49622
+
+Master Displaying Frame Table at 15:49622
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 31955				read
+	1					PID 31956				read
+	2					PID 31955				write
+	3					PID 31956				write
+	4					PID 31955				write
+	5					PID 31956				read
+	6					PID 31955				read
+	7					PID 31956				write
+	8					PID 31956				write
+	9					PID 31955				read
+
+Master: Listening for Memory Access Requests 16:49622
+
+Master: PID 31956 is requesting write of memory address 30829 at 16:49627
+
+Master: Page Fault; Memory Address 30829 not in Frame Table; Process 31956 is considered blocked at 16:49628
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 16:49628
+
+ Master: write permission granted to PID 31956 on memory address 30829 in Frame 12 at 16:49642
+
+Master Displaying Frame Table at 16:49642
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 31955				read
+	1					PID 31956				read
+	2					PID 31955				write
+	3					PID 31956				write
+	4					PID 31955				write
+	5					PID 31956				read
+	6					PID 31955				read
+	7					PID 31956				write
+	8					PID 31956				write
+	9					PID 31955				read
+
+Master: Listening for Memory Access Requests 17:49642
+
+Master: PID 31955 is requesting write of memory address 14167 at 17:49647
+
+Master: Page Fault; Memory Address 14167 not in Frame Table; Process 31955 is considered blocked at 17:49648
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 17:49648
+
+ Master: write permission granted to PID 31955 on memory address 14167 in Frame 13 at 17:49662
+
+Master Displaying Frame Table at 17:49662
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 31955				read
+	1					PID 31956				read
+	2					PID 31955				write
+	3					PID 31956				write
+	4					PID 31955				write
+	5					PID 31956				read
+	6					PID 31955				read
+	7					PID 31956				write
+	8					PID 31956				write
+	9					PID 31955				read
+
+Master: Listening for Memory Access Requests 18:49662
+
+Master: PID 31956 is requesting read of memory address 25076 at 18:49667
+
+Master: Page Fault; Memory Address 25076 not in Frame Table; Process 31956 is considered blocked at 18:49668
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 18:49668
+
+ Master: read permission granted to PID 31956 on memory address 25076 in Frame 14 at 18:49682
+
+Master Displaying Frame Table at 18:49682
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 31955				read
+	1					PID 31956				read
+	2					PID 31955				write
+	3					PID 31956				write
+	4					PID 31955				write
+	5					PID 31956				read
+	6					PID 31955				read
+	7					PID 31956				write
+	8					PID 31956				write
+	9					PID 31955				read
+
+Master: Listening for Memory Access Requests 19:49682
+
+Master: PID 31955 is requesting read of memory address 25076 at 19:49687
+
+Master: Page Fault; Memory Address 25076 not in Frame Table; Process 31955 is considered blocked at 19:49688
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 19:49688
+
+ Master: read permission granted to PID 31955 on memory address 25076 in Frame 15 at 19:49702
+
+Master Displaying Frame Table at 19:49702
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 31955				read
+	1					PID 31956				read
+	2					PID 31955				write
+	3					PID 31956				write
+	4					PID 31955				write
+	5					PID 31956				read
+	6					PID 31955				read
+	7					PID 31956				write
+	8					PID 31956				write
+	9					PID 31955				read
+
+Master: Listening for Memory Access Requests 20:49702
+
+Master: PID 31956 is requesting write of memory address 20107 at 20:49707
+
+Master: Master to PID 31956 -> Memory Address 20107 is in Frame 3 at 20:49717
+
+Master Displaying Frame Table at 20:49717
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 31955				read
+	1					PID 31956				read
+	2					PID 31955				write
+	3					PID 31956				write
+	4					PID 31955				write
+	5					PID 31956				read
+	6					PID 31955				read
+	7					PID 31956				write
+	8					PID 31956				write
+	9					PID 31955				read
+
+Master: Listening for Memory Access Requests 21:49717
+
+Master: PID 31955 is requesting write of memory address 20107 at 21:49722
+
+Master in Signal Handler; Ctrl+C interrupt received at 22:49722
+
+Master cleaning up resources at 22:49727
+
+Master stopping all pending user processes at 22:49729
+
+Master stopped all pending user processes at 24:49739
+
+Master Clock Shared Memory ID 32812 has been detached and deleted at 25:49764
+
+Master removed Messaqe Queue ID 32768 at 25:49779
+
+Master terminating at 26:49794
+
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:59336
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID -1				
+	1					PID -1				
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 2:59336
+
+Master: PID 33834 is requesting read of memory address 21980 at 2:59341
+
+Master: Page Fault; Memory Address 21980 not in Frame Table; Process 33834 is considered blocked at 2:59342
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:59342
+
+ Master: read permission granted to PID 33834 on memory address 21980 in Frame 0 at 2:59356
+
+Master Displaying Frame Table at 2:59356
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33834				read
+	1					PID -1				
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 3:59356
+
+Master: PID 33835 is requesting read of memory address 29402 at 3:59361
+
+Master: Page Fault; Memory Address 29402 not in Frame Table; Process 33835 is considered blocked at 3:59362
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:59362
+
+ Master: read permission granted to PID 33835 on memory address 29402 in Frame 1 at 3:59376
+
+Master Displaying Frame Table at 3:59376
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33834				read
+	1					PID 33835				read
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 4:59376
+
+Master: PID 33834 is requesting read of memory address 24102 at 4:59381
+
+Master: Page Fault; Memory Address 24102 not in Frame Table; Process 33834 is considered blocked at 4:59382
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 4:59382
+
+ Master: read permission granted to PID 33834 on memory address 24102 in Frame 2 at 4:59396
+
+Master Displaying Frame Table at 4:59396
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33834				read
+	1					PID 33835				read
+	2					PID 33834				read
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 5:59396
+
+Master: PID 33835 is requesting read of memory address 6874 at 5:59401
+
+Master: Page Fault; Memory Address 6874 not in Frame Table; Process 33835 is considered blocked at 5:59402
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 5:59402
+
+ Master: read permission granted to PID 33835 on memory address 6874 in Frame 3 at 5:59416
+
+Master Displaying Frame Table at 5:59416
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33834				read
+	1					PID 33835				read
+	2					PID 33834				read
+	3					PID 33835				read
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 6:59416
+
+Master: PID 33834 is requesting write of memory address 4754 at 6:59421
+
+Master: Page Fault; Memory Address 4754 not in Frame Table; Process 33834 is considered blocked at 6:59422
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 6:59422
+
+ Master: write permission granted to PID 33834 on memory address 4754 in Frame 4 at 6:59436
+
+Master Displaying Frame Table at 6:59436
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33834				read
+	1					PID 33835				read
+	2					PID 33834				read
+	3					PID 33835				read
+	4					PID 33834				write
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 7:59436
+
+Master: PID 33835 is requesting write of memory address 19223 at 7:59441
+
+Master: Page Fault; Memory Address 19223 not in Frame Table; Process 33835 is considered blocked at 7:59442
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 7:59442
+
+ Master: write permission granted to PID 33835 on memory address 19223 in Frame 5 at 7:59456
+
+Master Displaying Frame Table at 7:59456
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33834				read
+	1					PID 33835				read
+	2					PID 33834				read
+	3					PID 33835				read
+	4					PID 33834				write
+	5					PID 33835				write
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 8:59456
+
+Master: PID 33834 is requesting write of memory address 9883 at 8:59461
+
+Master: Page Fault; Memory Address 9883 not in Frame Table; Process 33834 is considered blocked at 8:59462
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 8:59462
+
+ Master: write permission granted to PID 33834 on memory address 9883 in Frame 6 at 8:59476
+
+Master Displaying Frame Table at 8:59476
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33834				read
+	1					PID 33835				read
+	2					PID 33834				read
+	3					PID 33835				read
+	4					PID 33834				write
+	5					PID 33835				write
+	6					PID 33834				write
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 9:59476
+
+Master: PID 33835 is requesting read of memory address 27833 at 9:59481
+
+Master: Page Fault; Memory Address 27833 not in Frame Table; Process 33835 is considered blocked at 9:59482
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 9:59482
+
+ Master: read permission granted to PID 33835 on memory address 27833 in Frame 7 at 9:59496
+
+Master Displaying Frame Table at 9:59496
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33834				read
+	1					PID 33835				read
+	2					PID 33834				read
+	3					PID 33835				read
+	4					PID 33834				write
+	5					PID 33835				write
+	6					PID 33834				write
+	7					PID 33835				read
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 10:59496
+
+Master: PID 33834 is requesting read of memory address 10985 at 10:59501
+
+Master: Page Fault; Memory Address 10985 not in Frame Table; Process 33834 is considered blocked at 10:59502
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 10:59502
+
+ Master: read permission granted to PID 33834 on memory address 10985 in Frame 8 at 10:59516
+
+Master Displaying Frame Table at 10:59516
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33834				read
+	1					PID 33835				read
+	2					PID 33834				read
+	3					PID 33835				read
+	4					PID 33834				write
+	5					PID 33835				write
+	6					PID 33834				write
+	7					PID 33835				read
+	8					PID 33834				read
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 11:59516
+
+Master: PID 33835 is requesting read of memory address 10054 at 11:59521
+
+Master: Page Fault; Memory Address 10054 not in Frame Table; Process 33835 is considered blocked at 11:59522
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 11:59522
+
+ Master: read permission granted to PID 33835 on memory address 10054 in Frame 9 at 11:59536
+
+Master Displaying Frame Table at 11:59536
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33834				read
+	1					PID 33835				read
+	2					PID 33834				read
+	3					PID 33835				read
+	4					PID 33834				write
+	5					PID 33835				write
+	6					PID 33834				write
+	7					PID 33835				read
+	8					PID 33834				read
+	9					PID 33835				read
+
+Master: Listening for Memory Access Requests 12:59536
+
+Master: PID 33834 is requesting read of memory address 30812 at 12:59541
+
+Master in Signal Handler; Ctrl+C interrupt received at 13:59541
+
+Master cleaning up resources at 13:59546
+
+Master stopping all pending user processes at 13:59548
+
+Master stopped all pending user processes at 15:59558
+
+Master Clock Shared Memory ID 32816 has been detached and deleted at 16:59583
+
+Master removed Messaqe Queue ID 32769 at 16:59598
+
+Master terminating at 17:59613
+
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:2504
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID -1				
+	1					PID -1				
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 2:2504
+
+Master: PID 33936 is requesting write of memory address 14517 at 2:2509
+
+Master: Page Fault; Memory Address 14517 not in Frame Table; Process 33936 is considered blocked at 2:2510
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:2510
+
+ Master: write permission granted to PID 33936 on memory address 14517 in Frame 0 at 2:2524
+
+Master Displaying Frame Table at 2:2524
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33936				write
+	1					PID -1				
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 3:2524
+
+Master: PID 33937 is requesting read of memory address 21905 at 3:2529
+
+Master: Page Fault; Memory Address 21905 not in Frame Table; Process 33937 is considered blocked at 3:2530
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:2530
+
+ Master: read permission granted to PID 33937 on memory address 21905 in Frame 1 at 3:2544
+
+Master Displaying Frame Table at 3:2544
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33936				write
+	1					PID 33937				read
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 4:2544
+
+Master: PID 33936 is requesting write of memory address 2756 at 4:2549
+
+Master: Page Fault; Memory Address 2756 not in Frame Table; Process 33936 is considered blocked at 4:2550
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 4:2550
+
+ Master: write permission granted to PID 33936 on memory address 2756 in Frame 2 at 4:2564
+
+Master Displaying Frame Table at 4:2564
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33936				write
+	1					PID 33937				read
+	2					PID 33936				write
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 5:2564
+
+Master: PID 33937 is requesting write of memory address 4409 at 5:2569
+
+Master: Page Fault; Memory Address 4409 not in Frame Table; Process 33937 is considered blocked at 5:2570
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 5:2570
+
+ Master: write permission granted to PID 33937 on memory address 4409 in Frame 3 at 5:2584
+
+Master Displaying Frame Table at 5:2584
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33936				write
+	1					PID 33937				read
+	2					PID 33936				write
+	3					PID 33937				write
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 6:2584
+
+Master: PID 33936 is requesting write of memory address 23940 at 6:2589
+
+Master: Page Fault; Memory Address 23940 not in Frame Table; Process 33936 is considered blocked at 6:2590
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 6:2590
+
+ Master: write permission granted to PID 33936 on memory address 23940 in Frame 4 at 6:2604
+
+Master Displaying Frame Table at 6:2604
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33936				write
+	1					PID 33937				read
+	2					PID 33936				write
+	3					PID 33937				write
+	4					PID 33936				write
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 7:2604
+
+Master: PID 33937 is requesting write of memory address 4675 at 7:2609
+
+Master: Master to PID 33937 -> Memory Address 4675 is in Frame 3 at 7:2619
+
+Master Displaying Frame Table at 7:2619
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33936				write
+	1					PID 33937				read
+	2					PID 33936				write
+	3					PID 33937				write
+	4					PID 33936				write
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 8:2619
+
+Master: PID 33937 has informed Master of its termination at 8:2624
+
+Master: PID 33937 stats:
+
+Total memory requests: 3
+
+Total memory page faults: 2
+
+Total non-memory page faults: 1
+
+Average memory access speed: 78947368.000000 frames per second
+
+Master Displaying Frame Table at 8:2624
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33936				write
+	1					PID 33937				read
+	2					PID 33936				write
+	3					PID 33937				write
+	4					PID 33936				write
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 9:2624
+
+Master: PID 33936 is requesting write of memory address 4106 at 9:2629
+
+Master: Page Fault; Memory Address 4106 not in Frame Table; Process 33936 is considered blocked at 9:2630
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 9:2630
+
+ Master: write permission granted to PID 33936 on memory address 4106 in Frame 5 at 9:2644
+
+Master Displaying Frame Table at 9:2644
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33936				write
+	1					PID 33937				read
+	2					PID 33936				write
+	3					PID 33937				write
+	4					PID 33936				write
+	5					PID 33936				write
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 10:2644
+
+Master: PID 33936 is requesting read of memory address 26528 at 10:2649
+
+Master: Page Fault; Memory Address 26528 not in Frame Table; Process 33936 is considered blocked at 10:2650
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 10:2650
+
+ Master: read permission granted to PID 33936 on memory address 26528 in Frame 6 at 10:2664
+
+Master Displaying Frame Table at 10:2664
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33936				write
+	1					PID 33937				read
+	2					PID 33936				write
+	3					PID 33937				write
+	4					PID 33936				write
+	5					PID 33936				write
+	6					PID 33936				read
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 11:2664
+
+Master: PID 33936 is requesting write of memory address 4046 at 11:2669
+
+Master: Page Fault; Memory Address 4046 not in Frame Table; Process 33936 is considered blocked at 11:2670
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 11:2670
+
+ Master: write permission granted to PID 33936 on memory address 4046 in Frame 7 at 11:2684
+
+Master Displaying Frame Table at 11:2684
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33936				write
+	1					PID 33937				read
+	2					PID 33936				write
+	3					PID 33937				write
+	4					PID 33936				write
+	5					PID 33936				write
+	6					PID 33936				read
+	7					PID 33936				write
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 12:2684
+
+Master: PID 33936 is requesting write of memory address 25905 at 12:2689
+
+Master: Master to PID 33936 -> Memory Address 25905 is in Frame 6 at 12:2699
+
+Master Displaying Frame Table at 12:2699
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33936				write
+	1					PID 33937				read
+	2					PID 33936				write
+	3					PID 33937				write
+	4					PID 33936				write
+	5					PID 33936				write
+	6					PID 33936				read
+	7					PID 33936				write
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 13:2699
+
+Master: PID 33936 has informed Master of its termination at 13:2704
+
+Master: PID 33936 stats:
+
+Total memory requests: 7
+
+Total memory page faults: 6
+
+Total non-memory page faults: 1
+
+Average memory access speed: 74468088.000000 frames per second
+
+Master Displaying Frame Table at 13:2704
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 33936				write
+	1					PID 33937				read
+	2					PID 33936				write
+	3					PID 33937				write
+	4					PID 33936				write
+	5					PID 33936				write
+	6					PID 33936				read
+	7					PID 33936				write
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 14:2704
+
+Master timed out at 15:2709
+Master cleaning up resources at 15:2714
+
+Master stopping all pending user processes at 15:2716
+
+Master stopped all pending user processes at 17:2726
+
+Master Clock Shared Memory ID 32818 has been detached and deleted at 18:2751
+
+Master removed Messaqe Queue ID 32770 at 18:2766
+
+Master terminating at 19:2771
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:10952
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID -1				
+	1					PID -1				
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 2:10952
+
+Master: PID 34055 is requesting write of memory address 23222 at 2:10957
+
+Master: Page Fault; Memory Address 23222 not in Frame Table; Process 34055 is considered blocked at 2:10958
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:10958
+
+ Master: write permission granted to PID 34055 on memory address 23222 in Frame 0 at 2:10972
+
+Master Displaying Frame Table at 2:10972
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34055				write
+	1					PID -1				
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 3:10972
+
+Master: PID 34067 is requesting write of memory address 23089 at 3:10977
+
+Master: Page Fault; Memory Address 23089 not in Frame Table; Process 34067 is considered blocked at 3:10978
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:10978
+
+ Master: write permission granted to PID 34067 on memory address 23089 in Frame 1 at 3:10992
+
+Master Displaying Frame Table at 3:10992
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34055				write
+	1					PID 34067				write
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 4:10992
+
+Master: PID 34055 is requesting write of memory address 10663 at 4:10997
+
+Master: Page Fault; Memory Address 10663 not in Frame Table; Process 34055 is considered blocked at 4:10998
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 4:10998
+
+ Master: write permission granted to PID 34055 on memory address 10663 in Frame 2 at 4:11012
+
+Master Displaying Frame Table at 4:11012
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34055				write
+	1					PID 34067				write
+	2					PID 34055				write
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 5:11012
+
+Master: PID 34067 is requesting write of memory address 8029 at 5:11017
+
+Master: Page Fault; Memory Address 8029 not in Frame Table; Process 34067 is considered blocked at 5:11018
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 5:11018
+
+ Master: write permission granted to PID 34067 on memory address 8029 in Frame 3 at 5:11032
+
+Master Displaying Frame Table at 5:11032
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34055				write
+	1					PID 34067				write
+	2					PID 34055				write
+	3					PID 34067				write
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 6:11032
+
+Master: PID 34055 is requesting read of memory address 14935 at 6:11037
+
+Master: Page Fault; Memory Address 14935 not in Frame Table; Process 34055 is considered blocked at 6:11038
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 6:11038
+
+ Master: read permission granted to PID 34055 on memory address 14935 in Frame 4 at 6:11052
+
+Master Displaying Frame Table at 6:11052
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34055				write
+	1					PID 34067				write
+	2					PID 34055				write
+	3					PID 34067				write
+	4					PID 34055				read
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 7:11052
+
+Master: PID 34067 is requesting read of memory address 24410 at 7:11057
+
+Master: Page Fault; Memory Address 24410 not in Frame Table; Process 34067 is considered blocked at 7:11058
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 7:11058
+
+ Master: read permission granted to PID 34067 on memory address 24410 in Frame 5 at 7:11072
+
+Master Displaying Frame Table at 7:11072
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34055				write
+	1					PID 34067				write
+	2					PID 34055				write
+	3					PID 34067				write
+	4					PID 34055				read
+	5					PID 34067				read
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 8:11072
+
+Master: PID 34055 is requesting write of memory address 20041 at 8:11077
+
+Master: Page Fault; Memory Address 20041 not in Frame Table; Process 34055 is considered blocked at 8:11078
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 8:11078
+
+ Master: write permission granted to PID 34055 on memory address 20041 in Frame 6 at 8:11092
+
+Master Displaying Frame Table at 8:11092
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34055				write
+	1					PID 34067				write
+	2					PID 34055				write
+	3					PID 34067				write
+	4					PID 34055				read
+	5					PID 34067				read
+	6					PID 34055				write
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 9:11092
+
+Master: PID 34067 is requesting read of memory address 9393 at 9:11097
+
+Master: Page Fault; Memory Address 9393 not in Frame Table; Process 34067 is considered blocked at 9:11098
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 9:11098
+
+ Master: read permission granted to PID 34067 on memory address 9393 in Frame 7 at 9:11112
+
+Master Displaying Frame Table at 9:11112
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34055				write
+	1					PID 34067				write
+	2					PID 34055				write
+	3					PID 34067				write
+	4					PID 34055				read
+	5					PID 34067				read
+	6					PID 34055				write
+	7					PID 34067				read
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 10:11112
+
+Master: PID 34055 is requesting write of memory address 1718 at 10:11117
+
+Master: Page Fault; Memory Address 1718 not in Frame Table; Process 34055 is considered blocked at 10:11118
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 10:11118
+
+ Master: write permission granted to PID 34055 on memory address 1718 in Frame 8 at 10:11132
+
+Master Displaying Frame Table at 10:11132
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34055				write
+	1					PID 34067				write
+	2					PID 34055				write
+	3					PID 34067				write
+	4					PID 34055				read
+	5					PID 34067				read
+	6					PID 34055				write
+	7					PID 34067				read
+	8					PID 34055				write
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 11:11132
+
+Master: PID 34067 is requesting read of memory address 23311 at 11:11137
+
+Master: Master to PID 34067 -> Memory Address 23311 is in Frame 1 at 11:11147
+
+Master Displaying Frame Table at 11:11147
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34055				write
+	1					PID 34067				write
+	2					PID 34055				write
+	3					PID 34067				write
+	4					PID 34055				read
+	5					PID 34067				read
+	6					PID 34055				write
+	7					PID 34067				read
+	8					PID 34055				write
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 12:11147
+
+Master: PID 34067 has informed Master of its termination at 12:11152
+
+Master: PID 34067 stats:
+
+Total memory requests: 5
+
+Total memory page faults: 4
+
+Total non-memory page faults: 1
+
+Average memory access speed: 75757576.00 frames per second
+
+Master Displaying Frame Table at 12:11152
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34055				write
+	1					PID 34067				write
+	2					PID 34055				write
+	3					PID 34067				write
+	4					PID 34055				read
+	5					PID 34067				read
+	6					PID 34055				write
+	7					PID 34067				read
+	8					PID 34055				write
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 13:11152
+
+Master: PID 34055 is requesting write of memory address 21789 at 13:11157
+
+Master: Page Fault; Memory Address 21789 not in Frame Table; Process 34055 is considered blocked at 13:11158
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 13:11158
+
+ Master: write permission granted to PID 34055 on memory address 21789 in Frame 9 at 13:11172
+
+Master Displaying Frame Table at 13:11172
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34055				write
+	1					PID 34067				write
+	2					PID 34055				write
+	3					PID 34067				write
+	4					PID 34055				read
+	5					PID 34067				read
+	6					PID 34055				write
+	7					PID 34067				read
+	8					PID 34055				write
+	9					PID 34055				write
+
+Master: Listening for Memory Access Requests 14:11172
+
+Master: PID 34055 is requesting read of memory address 13687 at 14:11177
+
+Master: Page Fault; Memory Address 13687 not in Frame Table; Process 34055 is considered blocked at 14:11178
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 14:11178
+
+ Master: read permission granted to PID 34055 on memory address 13687 in Frame 10 at 14:11192
+
+Master Displaying Frame Table at 14:11192
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34055				write
+	1					PID 34067				write
+	2					PID 34055				write
+	3					PID 34067				write
+	4					PID 34055				read
+	5					PID 34067				read
+	6					PID 34055				write
+	7					PID 34067				read
+	8					PID 34055				write
+	9					PID 34055				write
+
+Master: Listening for Memory Access Requests 15:11192
+
+Master: PID 34055 is requesting write of memory address 29535 at 15:11197
+
+Master: Page Fault; Memory Address 29535 not in Frame Table; Process 34055 is considered blocked at 15:11198
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 15:11198
+
+ Master: write permission granted to PID 34055 on memory address 29535 in Frame 11 at 15:11212
+
+Master Displaying Frame Table at 15:11212
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34055				write
+	1					PID 34067				write
+	2					PID 34055				write
+	3					PID 34067				write
+	4					PID 34055				read
+	5					PID 34067				read
+	6					PID 34055				write
+	7					PID 34067				read
+	8					PID 34055				write
+	9					PID 34055				write
+
+Master: Listening for Memory Access Requests 16:11212
+
+Master: PID 34055 is requesting write of memory address 31139 at 16:11217
+
+Master: Page Fault; Memory Address 31139 not in Frame Table; Process 34055 is considered blocked at 16:11218
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 16:11218
+
+ Master: write permission granted to PID 34055 on memory address 31139 in Frame 12 at 16:11232
+
+Master Displaying Frame Table at 16:11232
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34055				write
+	1					PID 34067				write
+	2					PID 34055				write
+	3					PID 34067				write
+	4					PID 34055				read
+	5					PID 34067				read
+	6					PID 34055				write
+	7					PID 34067				read
+	8					PID 34055				write
+	9					PID 34055				write
+
+Master: Listening for Memory Access Requests 17:11232
+
+Master timed out at 18:11237
+Master cleaning up resources at 18:11242
+
+Master stopping all pending user processes at 18:11244
+
+Master stopped all pending user processes at 20:11254
+
+Master Clock Shared Memory ID 32824 has been detached and deleted at 21:11279
+
+Master removed Messaqe Queue ID 32771 at 21:11294
+
+Master terminating at 22:11299
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:62664
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID -1				
+	1					PID -1				
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 2:62664
+
+Master: PID 34917 is requesting read of memory address 3126 at 2:62669
+
+Master: Page Fault; Memory Address 3126 not in Frame Table; Process 34917 is considered blocked at 2:62670
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:62670
+
+ Master: read permission granted to PID 34917 on memory address 3126 in Frame 0 at 2:62684
+
+Master Displaying Frame Table at 2:62684
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34917				read
+	1					PID -1				
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 3:62684
+
+Master: PID 34918 is requesting write of memory address 23274 at 3:62689
+
+Master: Page Fault; Memory Address 23274 not in Frame Table; Process 34918 is considered blocked at 3:62690
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:62690
+
+ Master: write permission granted to PID 34918 on memory address 23274 in Frame 1 at 3:62704
+
+Master Displaying Frame Table at 3:62704
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34917				read
+	1					PID 34918				write
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 4:62704
+
+Master: PID 34917 is requesting read of memory address 26008 at 4:62709
+
+Master: Page Fault; Memory Address 26008 not in Frame Table; Process 34917 is considered blocked at 4:62710
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 4:62710
+
+ Master: read permission granted to PID 34917 on memory address 26008 in Frame 2 at 4:62724
+
+Master Displaying Frame Table at 4:62724
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34917				read
+	1					PID 34918				write
+	2					PID 34917				read
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 5:62724
+
+Master: PID 34918 is requesting read of memory address 24984 at 5:62729
+
+Master: Page Fault; Memory Address 24984 not in Frame Table; Process 34918 is considered blocked at 5:62730
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 5:62730
+
+ Master: read permission granted to PID 34918 on memory address 24984 in Frame 3 at 5:62744
+
+Master Displaying Frame Table at 5:62744
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34917				read
+	1					PID 34918				write
+	2					PID 34917				read
+	3					PID 34918				read
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 6:62744
+
+Master: PID 34917 is requesting read of memory address 22967 at 6:62749
+
+Master: Page Fault; Memory Address 22967 not in Frame Table; Process 34917 is considered blocked at 6:62750
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 6:62750
+
+ Master: read permission granted to PID 34917 on memory address 22967 in Frame 4 at 6:62764
+
+Master Displaying Frame Table at 6:62764
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34917				read
+	1					PID 34918				write
+	2					PID 34917				read
+	3					PID 34918				read
+	4					PID 34917				read
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 7:62764
+
+Master: PID 34918 is requesting read of memory address 24014 at 7:62769
+
+Master: Page Fault; Memory Address 24014 not in Frame Table; Process 34918 is considered blocked at 7:62770
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 7:62770
+
+ Master: read permission granted to PID 34918 on memory address 24014 in Frame 5 at 7:62784
+
+Master Displaying Frame Table at 7:62784
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34917				read
+	1					PID 34918				write
+	2					PID 34917				read
+	3					PID 34918				read
+	4					PID 34917				read
+	5					PID 34918				read
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 8:62784
+
+Master: PID 34917 is requesting read of memory address 32740 at 8:62789
+
+Master: Page Fault; Memory Address 32740 not in Frame Table; Process 34917 is considered blocked at 8:62790
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 8:62790
+
+ Master: read permission granted to PID 34917 on memory address 32740 in Frame 6 at 8:62804
+
+Master Displaying Frame Table at 8:62804
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34917				read
+	1					PID 34918				write
+	2					PID 34917				read
+	3					PID 34918				read
+	4					PID 34917				read
+	5					PID 34918				read
+	6					PID 34917				read
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 9:62804
+
+Master: PID 34918 is requesting write of memory address 4682 at 9:62809
+
+Master: Page Fault; Memory Address 4682 not in Frame Table; Process 34918 is considered blocked at 9:62810
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 9:62810
+
+ Master: write permission granted to PID 34918 on memory address 4682 in Frame 7 at 9:62824
+
+Master Displaying Frame Table at 9:62824
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34917				read
+	1					PID 34918				write
+	2					PID 34917				read
+	3					PID 34918				read
+	4					PID 34917				read
+	5					PID 34918				read
+	6					PID 34917				read
+	7					PID 34918				write
+	8					PID -1				
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 10:62824
+
+Master: PID 34917 is requesting read of memory address 17710 at 10:62829
+
+Master: Page Fault; Memory Address 17710 not in Frame Table; Process 34917 is considered blocked at 10:62830
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 10:62830
+
+ Master: read permission granted to PID 34917 on memory address 17710 in Frame 8 at 10:62844
+
+Master Displaying Frame Table at 10:62844
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34917				read
+	1					PID 34918				write
+	2					PID 34917				read
+	3					PID 34918				read
+	4					PID 34917				read
+	5					PID 34918				read
+	6					PID 34917				read
+	7					PID 34918				write
+	8					PID 34917				read
+	9					PID -1				
+
+Master: Listening for Memory Access Requests 11:62844
+
+Master: PID 34918 is requesting read of memory address 15158 at 11:62849
+
+Master: Page Fault; Memory Address 15158 not in Frame Table; Process 34918 is considered blocked at 11:62850
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 11:62850
+
+ Master: read permission granted to PID 34918 on memory address 15158 in Frame 9 at 11:62864
+
+Master Displaying Frame Table at 11:62864
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34917				read
+	1					PID 34918				write
+	2					PID 34917				read
+	3					PID 34918				read
+	4					PID 34917				read
+	5					PID 34918				read
+	6					PID 34917				read
+	7					PID 34918				write
+	8					PID 34917				read
+	9					PID 34918				read
+
+Master: Listening for Memory Access Requests 12:62864
+
+Master: PID 34917 is requesting read of memory address 18000 at 12:62869
+
+Master: Master to PID 34917 -> Memory Address 18000 is in Frame 8 at 12:62879
+
+Master Displaying Frame Table at 12:62879
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34917				read
+	1					PID 34918				write
+	2					PID 34917				read
+	3					PID 34918				read
+	4					PID 34917				read
+	5					PID 34918				read
+	6					PID 34917				read
+	7					PID 34918				write
+	8					PID 34917				read
+	9					PID 34918				read
+
+Master: Listening for Memory Access Requests 13:62879
+
+Master: PID 34918 is requesting read of memory address 16476 at 13:62884
+
+Master: Page Fault; Memory Address 16476 not in Frame Table; Process 34918 is considered blocked at 13:62885
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 13:62885
+
+ Master: read permission granted to PID 34918 on memory address 16476 in Frame 10 at 13:62899
+
+Master Displaying Frame Table at 13:62899
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34917				read
+	1					PID 34918				write
+	2					PID 34917				read
+	3					PID 34918				read
+	4					PID 34917				read
+	5					PID 34918				read
+	6					PID 34917				read
+	7					PID 34918				write
+	8					PID 34917				read
+	9					PID 34918				read
+
+Master: Listening for Memory Access Requests 14:62899
+
+Master: PID 34917 has informed Master of its termination at 14:62904
+
+Master: PID 34917 stats:
+
+Total memory requests: 6
+
+Total memory page faults: 5
+
+Total non-memory page faults: 1
+
+Average memory access speed: 75000000.00 frames per second
+Frames -> 0, 8, 4, 2, 6,  have been cleared in the Frame Table
+Master Displaying Frame Table at 14:62904
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID -1				
+	1					PID 34918				write
+	2					PID -1				
+	3					PID 34918				read
+	4					PID -1				
+	5					PID 34918				read
+	6					PID -1				
+	7					PID 34918				write
+	8					PID -1				
+	9					PID 34918				read
+
+Master: Listening for Memory Access Requests 15:62904
+
+Master: PID 34918 is requesting write of memory address 3804 at 15:62909
+
+Master: Page Fault; Memory Address 3804 not in Frame Table; Process 34918 is considered blocked at 15:62910
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 15:62910
+
+ Master: write permission granted to PID 34918 on memory address 3804 in Frame 0 at 15:62924
+
+Master Displaying Frame Table at 15:62924
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34918				write
+	1					PID 34918				write
+	2					PID -1				
+	3					PID 34918				read
+	4					PID -1				
+	5					PID 34918				read
+	6					PID -1				
+	7					PID 34918				write
+	8					PID -1				
+	9					PID 34918				read
+
+Master: Listening for Memory Access Requests 16:62924
+
+Master: PID 34918 is requesting write of memory address 19670 at 16:62929
+
+Master: Page Fault; Memory Address 19670 not in Frame Table; Process 34918 is considered blocked at 16:62930
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 16:62930
+
+ Master: write permission granted to PID 34918 on memory address 19670 in Frame 2 at 16:62944
+
+Master Displaying Frame Table at 16:62944
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34918				write
+	1					PID 34918				write
+	2					PID 34918				write
+	3					PID 34918				read
+	4					PID -1				
+	5					PID 34918				read
+	6					PID -1				
+	7					PID 34918				write
+	8					PID -1				
+	9					PID 34918				read
+
+Master: Listening for Memory Access Requests 17:62944
+
+Master: PID 34918 is requesting read of memory address 11367 at 17:62949
+
+Master: Page Fault; Memory Address 11367 not in Frame Table; Process 34918 is considered blocked at 17:62950
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 17:62950
+
+ Master: read permission granted to PID 34918 on memory address 11367 in Frame 4 at 17:62964
+
+Master Displaying Frame Table at 17:62964
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 34918				write
+	1					PID 34918				write
+	2					PID 34918				write
+	3					PID 34918				read
+	4					PID 34918				read
+	5					PID 34918				read
+	6					PID -1				
+	7					PID 34918				write
+	8					PID -1				
+	9					PID 34918				read
+
+Master: Listening for Memory Access Requests 18:62964
+
+Master timed out at 19:62969
+Master cleaning up resources at 19:62974
+
+Master stopping all pending user processes at 19:62976
+
+Master stopped all pending user processes at 21:62986
+
+Master Clock Shared Memory ID 32828 has been detached and deleted at 22:63011
+
+Master removed Messaqe Queue ID 32772 at 22:63026
+
+Master terminating at 23:63031
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:22472
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID -1				
+	1					PID -1				
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 2:22472
+
+Master: PID 35085 is requesting read of memory address 22755 at 2:22477
+
+Master: Page Fault; Memory Address 22755 not in Frame Table; Process 35085 is considered blocked at 2:22478
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:22478
+
+ Master: read permission granted to PID 35085 on memory address 22755 in Frame 0 at 2:22492
+
+Master Displaying Frame Table at 2:22492
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 35085				read
+	1					PID -1				
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 3:22492
+
+Master: PID 35094 is requesting read of memory address 4006 at 3:22497
+
+Master: Page Fault; Memory Address 4006 not in Frame Table; Process 35094 is considered blocked at 3:22498
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:22498
+
+ Master: read permission granted to PID 35094 on memory address 4006 in Frame 1 at 3:22512
+
+Master Displaying Frame Table at 3:22512
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 35085				read
+	1					PID 35094				read
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 4:22512
+
+Master: PID 35085 is requesting write of memory address 8239 at 4:22517
+
+Master: Page Fault; Memory Address 8239 not in Frame Table; Process 35085 is considered blocked at 4:22518
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 4:22518
+
+ Master: write permission granted to PID 35085 on memory address 8239 in Frame 2 at 4:22532
+
+Master Displaying Frame Table at 4:22532
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 35085				read
+	1					PID 35094				read
+	2					PID 35085				write
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 5:22532
+
+Master: PID 35094 is requesting write of memory address 15895 at 5:22537
+
+Master: Page Fault; Memory Address 15895 not in Frame Table; Process 35094 is considered blocked at 5:22538
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 5:22538
+
+ Master: write permission granted to PID 35094 on memory address 15895 in Frame 3 at 5:22552
+
+Master Displaying Frame Table at 5:22552
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 35085				read
+	1					PID 35094				read
+	2					PID 35085				write
+	3					PID 35094				write
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 6:22552
+
+Master: PID 35085 is requesting write of memory address 19761 at 6:22557
+
+Master: Page Fault; Memory Address 19761 not in Frame Table; Process 35085 is considered blocked at 6:22558
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 6:22558
+
+ Master: write permission granted to PID 35085 on memory address 19761 in Frame 4 at 6:22572
+
+Master Displaying Frame Table at 6:22572
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 35085				read
+	1					PID 35094				read
+	2					PID 35085				write
+	3					PID 35094				write
+	4					PID 35085				write
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 7:22572
+
+Master: PID 35094 is requesting read of memory address 18267 at 7:22577
+
+Master: Page Fault; Memory Address 18267 not in Frame Table; Process 35094 is considered blocked at 7:22578
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 7:22578
+
+ Master: read permission granted to PID 35094 on memory address 18267 in Frame 5 at 7:22592
+
+Master Displaying Frame Table at 7:22592
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 35085				read
+	1					PID 35094				read
+	2					PID 35085				write
+	3					PID 35094				write
+	4					PID 35085				write
+	5					PID 35094				read
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 8:22592
+
+Master: PID 35085 is requesting read of memory address 29789 at 8:22597
+
+Master: Page Fault; Memory Address 29789 not in Frame Table; Process 35085 is considered blocked at 8:22598
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 8:22598
+
+ Master: read permission granted to PID 35085 on memory address 29789 in Frame 6 at 8:22612
+
+Master Displaying Frame Table at 8:22612
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 35085				read
+	1					PID 35094				read
+	2					PID 35085				write
+	3					PID 35094				write
+	4					PID 35085				write
+	5					PID 35094				read
+	6					PID 35085				read
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 9:22612
+
+Master: PID 35094 is requesting write of memory address 30676 at 9:22617
+
+Master: Page Fault; Memory Address 30676 not in Frame Table; Process 35094 is considered blocked at 9:22618
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 9:22618
+
+ Master: write permission granted to PID 35094 on memory address 30676 in Frame 7 at 9:22632
+
+Master Displaying Frame Table at 9:22632
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 35085				read
+	1					PID 35094				read
+	2					PID 35085				write
+	3					PID 35094				write
+	4					PID 35085				write
+	5					PID 35094				read
+	6					PID 35085				read
+	7					PID 35094				write
+	8					PID -1				
+	9					PID -1				
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 10:22632
+
+Master: PID 35085 is requesting write of memory address 22009 at 10:22637
+
+Master: Page Fault; Memory Address 22009 not in Frame Table; Process 35085 is considered blocked at 10:22638
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 10:22638
+
+ Master: write permission granted to PID 35085 on memory address 22009 in Frame 8 at 10:22652
+
+Master Displaying Frame Table at 10:22652
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 35085				read
+	1					PID 35094				read
+	2					PID 35085				write
+	3					PID 35094				write
+	4					PID 35085				write
+	5					PID 35094				read
+	6					PID 35085				read
+	7					PID 35094				write
+	8					PID 35085				write
+	9					PID -1				
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 11:22652
+
+Master: PID 35094 is requesting write of memory address 26079 at 11:22657
+
+Master: Page Fault; Memory Address 26079 not in Frame Table; Process 35094 is considered blocked at 11:22658
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 11:22658
+
+ Master: write permission granted to PID 35094 on memory address 26079 in Frame 9 at 11:22672
+
+Master Displaying Frame Table at 11:22672
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 35085				read
+	1					PID 35094				read
+	2					PID 35085				write
+	3					PID 35094				write
+	4					PID 35085				write
+	5					PID 35094				read
+	6					PID 35085				read
+	7					PID 35094				write
+	8					PID 35085				write
+	9					PID 35094				write
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 12:22672
+
+Master: PID 35085 is requesting read of memory address 4527 at 12:22677
+
+Master: Page Fault; Memory Address 4527 not in Frame Table; Process 35085 is considered blocked at 12:22678
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 12:22678
+
+ Master: read permission granted to PID 35085 on memory address 4527 in Frame 10 at 12:22692
+
+Master Displaying Frame Table at 12:22692
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 35085				read
+	1					PID 35094				read
+	2					PID 35085				write
+	3					PID 35094				write
+	4					PID 35085				write
+	5					PID 35094				read
+	6					PID 35085				read
+	7					PID 35094				write
+	8					PID 35085				write
+	9					PID 35094				write
+	10					PID 35085				read
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 13:22692
+
+Master: PID 35094 is requesting write of memory address 15514 at 13:22697
+
+Master: Master to PID 35094 -> Memory Address 15514 is in Frame 3 at 13:22707
+
+Master Displaying Frame Table at 13:22707
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 35085				read
+	1					PID 35094				read
+	2					PID 35085				write
+	3					PID 35094				write
+	4					PID 35085				write
+	5					PID 35094				read
+	6					PID 35085				read
+	7					PID 35094				write
+	8					PID 35085				write
+	9					PID 35094				write
+	10					PID 35085				read
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 14:22707
+
+Master: PID 35094 has informed Master of its termination at 14:22712
+
+Master: PID 35094 stats:
+
+Total memory requests: 6
+
+Total memory page faults: 5
+
+Total non-memory page faults: 1
+
+Average memory access speed: 75000000.00 frames per second
+
+Frames -> 1, 3, 5, 9, 7,  have been cleared in the Frame Table
+
+Master Displaying Frame Table at 14:22712
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 35085				read
+	1					PID -1				
+	2					PID 35085				write
+	3					PID -1				
+	4					PID 35085				write
+	5					PID -1				
+	6					PID 35085				read
+	7					PID -1				
+	8					PID 35085				write
+	9					PID -1				
+	10					PID 35085				read
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 15:22712
+
+Master: PID 35085 is requesting read of memory address 3120 at 15:22717
+
+Master: Page Fault; Memory Address 3120 not in Frame Table; Process 35085 is considered blocked at 15:22718
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 15:22718
+
+ Master: read permission granted to PID 35085 on memory address 3120 in Frame 1 at 15:22732
+
+Master Displaying Frame Table at 15:22732
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 35085				read
+	1					PID 35085				read
+	2					PID 35085				write
+	3					PID -1				
+	4					PID 35085				write
+	5					PID -1				
+	6					PID 35085				read
+	7					PID -1				
+	8					PID 35085				write
+	9					PID -1				
+	10					PID 35085				read
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 16:22732
+
+Master: PID 35085 is requesting write of memory address 24393 at 16:22737
+
+Master: Page Fault; Memory Address 24393 not in Frame Table; Process 35085 is considered blocked at 16:22738
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 16:22738
+
+ Master: write permission granted to PID 35085 on memory address 24393 in Frame 3 at 16:22752
+
+Master Displaying Frame Table at 16:22752
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 35085				read
+	1					PID 35085				read
+	2					PID 35085				write
+	3					PID 35085				write
+	4					PID 35085				write
+	5					PID -1				
+	6					PID 35085				read
+	7					PID -1				
+	8					PID 35085				write
+	9					PID -1				
+	10					PID 35085				read
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 17:22752
+
+Master: PID 35085 is requesting write of memory address 21652 at 17:22757
+
+Master: Master to PID 35085 -> Memory Address 21652 is in Frame 8 at 17:22767
+
+Master Displaying Frame Table at 17:22767
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 35085				read
+	1					PID 35085				read
+	2					PID 35085				write
+	3					PID 35085				write
+	4					PID 35085				write
+	5					PID -1				
+	6					PID 35085				read
+	7					PID -1				
+	8					PID 35085				write
+	9					PID -1				
+	10					PID 35085				read
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 18:22767
+
+Master timed out at 19:22772
+Master cleaning up resources at 19:22777
+
+Master stopping all pending user processes at 19:22779
+
+Master stopped all pending user processes at 21:22789
+
+Master Clock Shared Memory ID 0 has been detached and deleted at 22:22814
+
+Master removed Messaqe Queue ID 32773 at 22:22829
+
+Master terminating at 23:22834

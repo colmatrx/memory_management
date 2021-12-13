@@ -213,6 +213,8 @@ int main(int argc, char *argv[]){   //start of main() function
 
         permissionTokenInt = strtol(permissionToken, NULL, 10); //converts permissionToken to int
 
+        mtype = strtol(userIDToken, NULL, 10); //converts the user process ID to int  
+
         if (strtol(permissionToken, NULL, 10) == 0){
 
             strcpy(permission, "read");
@@ -228,16 +230,56 @@ int main(int argc, char *argv[]){   //start of main() function
 
         else if(strtol(permissionToken, NULL, 10) == -1){
 
+            float avgMemoryAccessSpeed, totalMemoryAccessTime; char frameToString[5];
+
             strcpy(permission, "termination");
-            snprintf(logstring, sizeof(logstring), "\nMaster: PID %s is informing Master of its termination at %hu:%hu\n", userIDToken, *osstimeseconds, *osstimenanoseconds+=5);
+            kill(strtol(userIDToken,NULL,10), SIGKILL); //be sure to kill the child process
+            snprintf(logstring, sizeof(logstring), "\nMaster: PID %s has informed Master of its termination at %hu:%hu\n", userIDToken, *osstimeseconds, *osstimenanoseconds+=5);
             logmsg(logfilename, logstring); //calling logmsg() to write to file
-            kill(strtol(userIDToken,NULL,10), SIGKILL); //handle clearing of PCB and Frame table here
+
+            //print out the stats here 
+            for (int i = 0; i < max_number_of_processes; i++){  //traverse the process table to find the pid and the requested Page
+
+                if (pageTable[i].pID == mtype){ //true if pid is found in process table 
+
+                    snprintf(logstring, sizeof(logstring), "\nMaster: PID %s stats:\n", userIDToken);
+                    logmsg(logfilename, logstring); //calling logmsg() to write to file
+                    snprintf(logstring, sizeof(logstring), "\nTotal memory requests: %d\n", pageTable[i].numberOfMemoryRequest);
+                    logmsg(logfilename, logstring); //calling logmsg() to write to file
+                    snprintf(logstring, sizeof(logstring), "\nTotal memory page faults: %d\n", pageTable[i].numOfMemoryPagefault);
+                    logmsg(logfilename, logstring); //calling logmsg() to write to file
+                    snprintf(logstring, sizeof(logstring), "\nTotal non-memory page faults: %d\n", pageTable[i].numberOfMemoryRequest - pageTable[i].numOfMemoryPagefault);
+                    logmsg(logfilename, logstring); //calling logmsg() to write to file
+                    totalMemoryAccessTime = (0.00000001 * (pageTable[i].numberOfMemoryRequest - pageTable[i].numOfMemoryPagefault)) + (0.000000014 * pageTable[i].numOfMemoryPagefault);
+                    avgMemoryAccessSpeed = pageTable[i].numberOfMemoryRequest / totalMemoryAccessTime;
+                    snprintf(logstring, sizeof(logstring), "\nAverage memory access speed: %.2f frames per second\n", avgMemoryAccessSpeed);
+                    logmsg(logfilename, logstring); //calling logmsg() to write to file
+
+                    //now reset the process control block and free the frames used by the process
+                    strcpy(logstring, ""); strcat(logstring, "\nFrames -> ");
+                    pageTable[i].numberOfMemoryRequest = 0; //set the default value
+                    pageTable[i].numOfMemoryPagefault = 0; //set the default value
+                    for (int index = 0; index < 32; index++){   //traverse the page table to clear the dirtyBit and free the corresponding frames inside page table
+
+                        pageTable[i].dirtyBit[index] = 0;   //clear the dirtyBit
+                        if (pageTable[i].pageNumber[index] > -1){   //if a frame address is tored in the page table location
+
+                            frameTable.frameIndex[pageTable[i].pageNumber[index]] = -1; //reset the frame
+                            frameTable.framePermission[pageTable[i].pageNumber[index]] = -1;    //reset the corresponding frame permission
+                            frameTable.frameFIFO[pageTable[i].pageNumber[index]] = 0;   //reset the fifo counter
+                            sprintf(frameToString, "%d", pageTable[i].pageNumber[index]);
+                            strcat(logstring, frameToString); strcat(logstring, ", ");
+                        }
+                    } 
+                    strcat(logstring, " have been cleared in the Frame Table\n")                   ;
+                    logmsg(logfilename, logstring); //calling logmsg() to write to file
+                    break;
+                }
+            }          
             continue;
-        }        
+        }          
 
-        mtype = strtol(userIDToken, NULL, 10); //converts the user process ID to int    
-
-        //find the page number here
+        //Process the memory request here
         for (int i = 0; i < max_number_of_processes; i++){  //traverse the process table to find the pid and the requested Page
 
             if (pageTable[i].pID == mtype){ //true if pid is found in process table    
@@ -277,8 +319,7 @@ int main(int argc, char *argv[]){   //start of main() function
                                 msgsnderr = msgsnd(memoryRequestMessageQueueID, &userMemoryRequest, sizeof(userMemoryRequest), IPC_NOWAIT);   //send message granted to user process
                                 snprintf(logstring, sizeof(logstring), "\n Master: %s permission granted to PID %s on memory address %s in Frame %d at %hu:%hu\n", permission, userIDToken, memoryAddressToken, frameNumber, *osstimeseconds, *osstimenanoseconds+=14);
 
-                                logmsg(logfilename, logstring); //calling logmsg() to write to file
-                            
+                                logmsg(logfilename, logstring); //calling logmsg() to write to file                            
                                 break; //break out of the loop once an empty frame is found
                         }
 
@@ -287,7 +328,7 @@ int main(int argc, char *argv[]){   //start of main() function
                                 //implement frame swapping here
                         }
                     }
-                }   //end of page fault if block
+                }//end of page fault if block
 
                 else{   //no page fault; page table contains the frame of the main memory address
 
@@ -453,21 +494,35 @@ void timeouthandler(int sig){   //this function is called if the program times o
 
 void displayFrameTable(void){   //function to display the frame table
 
-    strcpy(logstring, "");
-    snprintf(logstring, sizeof(logstring), "\nMaster Updating Resource Availability Table at %hu:%hu\n\n", *osstimeseconds, *osstimenanoseconds);
+    char indexToString[14]; char ownerToString[14]; char permissionToString[19];
+ 
+    strcpy(logstring, ""); strcpy(indexToString, ""); strcpy(ownerToString, ""); strcpy(permissionToString, "");
+    snprintf(logstring, sizeof(logstring), "\nMaster Displaying Frame Table at %hu:%hu\n\n", *osstimeseconds, *osstimenanoseconds);
     logmsg(logfilename, logstring); //calling logmsg() to write to file
 
     strcpy(logstring, "");
-    strcat(logstring, "|Frame Index|\t\t"); strcat(logstring, "|Frame Owner|\t\t"); strcat(logstring, "|Frame Permission|\n");
+    strcat(logstring, "|Frame Index|\t\t"); strcat(logstring, "|  Frame Owner |\t\t"); strcat(logstring, "|Frame Permission|\n");
     logmsg(logfilename, logstring); //calling logmsg() to write to file
 
     strcpy(logstring, "");
-    for (int i = 0; i < 256; i++){
+    for (int i = 0; i < 20; i++){
 
-        
+        printf("\nindex is %d, owner is %d and permission is %d", i, frameTable.frameIndex[i], frameTable.framePermission[i]);
+        sprintf(indexToString, "%d", i); //converts int to string
+        sprintf(ownerToString, "%d", frameTable.frameIndex[i]);
+        if (frameTable.framePermission[i] == 0)
+            strcpy(permissionToString, "read");
 
+        if (frameTable.framePermission[i] == 1)
+            strcpy(permissionToString, "write");
 
+        if (frameTable.framePermission[i] == -1)
+            strcpy(permissionToString, "");
 
+        strcat(logstring, "\t");
+        strcat(logstring, indexToString); strcat(logstring, "\t\t\t\t\t"); strcat(logstring, "PID ");
+        strcat(logstring, ownerToString); strcat(logstring, "\t\t\t\t");
+        strcat(logstring, permissionToString); strcat(logstring, "\n");
     }
-
+    logmsg(logfilename, logstring); //calling logmsg() to write to file
 }
