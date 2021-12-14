@@ -16,7 +16,7 @@
 
 /*Author Idris Adeleke CS4760 Project 6 - Memory Management*/
 
-/* Submitted December 1, 2021*/
+/* Submitted December 15, 2021*/
 
 //This is the main oss application that randomly creates child processes which in turn exec user_proc application
 
@@ -43,7 +43,6 @@ int frameFIFO[256];    //to track the FIFI index for swapping
 };
 struct frame frameTable;
 
-
 int blockedQueue[18];   //to store blocked processes
 
 int memoryRequestMessageQueueID;  //message queue ID
@@ -58,13 +57,15 @@ void siginthandler(int);    //handles Ctrl+C interrupt
 
 void timeouthandler(int sig);   //timeout handler function declaration
 
-void displayFrameTable(void);
+void displayFrameTable(void);   //function to dsiplay the frame table
+
+int swapFrame(void);    //function to swap the frame using FIFO
 
 unsigned int ossclockid, *ossclockaddress, *osstimeseconds, *osstimenanoseconds; //used for ossclock shared memory
 
 unsigned int ossofflinesecondclock; unsigned int ossofflinenanosecondclock; //used as offline clock before detaching from the oss clock shared memory
 
-int randomTime;
+int randomTime; int lastFIFOCount = 0;
 
 char *logfilename = "logfile.log"; char logstring[4096]; 
 
@@ -74,7 +75,7 @@ int main(int argc, char *argv[]){   //start of main() function
 
     char *resourceNum, *resourceID; char *userIDToken, *memoryAddressToken, *permissionToken;
 
-    long int mtype; int pid; int pidIndex; int fifoCount = 0;
+    long int mtype; int pid; int pidIndex; int fifoCount = 0; int swapBit;
 
     signal(SIGINT, siginthandler); //handles Ctrl+C signal inside OSS only     
 
@@ -150,7 +151,7 @@ int main(int argc, char *argv[]){   //start of main() function
 
     printf("%s", logstring);
     
-    for (int count = 0; count < 2; count++){       //randomly create user processes in this block
+    for (int count = 0; count < max_number_of_processes; count++){       //randomly create user processes in this block
 
         pid = fork();
 
@@ -238,7 +239,7 @@ int main(int argc, char *argv[]){   //start of main() function
             logmsg(logfilename, logstring); //calling logmsg() to write to file
 
             //print out the stats here 
-            for (int i = 0; i < max_number_of_processes; i++){  //traverse the process table to find the pid and the requested Page
+            for (int i = 0; i < max_number_of_processes; i++){  //traverse the process table to find the pid and in order to clear the process block, page table and frame table
 
                 if (pageTable[i].pID == mtype){ //true if pid is found in process table 
 
@@ -271,14 +272,16 @@ int main(int argc, char *argv[]){   //start of main() function
                             strcat(logstring, frameToString); strcat(logstring, ", ");
                         }
                     } 
-                    strcat(logstring, " have been cleared in the Frame Table\n")                   ;
+                    pageTable[i].pID = 0; //reset the Process ID to the default
+                    strcat(logstring, " have been freed in the Frame Table\n")                   ;
                     logmsg(logfilename, logstring); //calling logmsg() to write to file
                     break;
                 }
             }          
             continue;
-        }          
+        }     
 
+        swapBit = 1;    //set the swap bit
         //Process the memory request here
         for (int i = 0; i < max_number_of_processes; i++){  //traverse the process table to find the pid and the requested Page
 
@@ -292,7 +295,7 @@ int main(int argc, char *argv[]){   //start of main() function
                     //this is a page fault condition, block the process here and perform a page swap
                     userMemoryRequest.msgtype = mtype; strcpy(userMemoryRequest.msgcontent, "0");
 
-                    sleep(5);
+                    sleep(3);
 
                     msgsnderr = msgsnd(memoryRequestMessageQueueID, &userMemoryRequest, sizeof(userMemoryRequest), IPC_NOWAIT);   //send message granted to user process
                     
@@ -319,14 +322,27 @@ int main(int argc, char *argv[]){   //start of main() function
                                 msgsnderr = msgsnd(memoryRequestMessageQueueID, &userMemoryRequest, sizeof(userMemoryRequest), IPC_NOWAIT);   //send message granted to user process
                                 snprintf(logstring, sizeof(logstring), "\n Master: %s permission granted to PID %s on memory address %s in Frame %d at %hu:%hu\n", permission, userIDToken, memoryAddressToken, frameNumber, *osstimeseconds, *osstimenanoseconds+=14);
 
-                                logmsg(logfilename, logstring); //calling logmsg() to write to file                            
+                                logmsg(logfilename, logstring); //calling logmsg() to write to file   
+                                swapBit = 0;    //clear the swap bit to test whether or not to swap outside of the for loop                         
                                 break; //break out of the loop once an empty frame is found
                         }
+                    }
+                    //FIFO swapping is implemented in this block
+                    if (swapBit == 1){  
 
-                        else{   //if no empty frame is found
+                        swapFrame();    //call this function to do the frame swapping
+                        frameTable.frameIndex[lastFIFOCount-1] = pageTable[i].pID;  //store the calling processID in the frame to simulate which process is using it
+                        frameTable.framePermission[lastFIFOCount-1] = permissionTokenInt;   //store read/write permission for the frame
+                        frameTable.frameFIFO[lastFIFOCount-1] = fifoCount++;  //to track the order in which frames are filled to use for FIFO swapping
+                        pageTable[i].pageNumber[pageRequest] = lastFIFOCount - 1; //keep the main memory frame number in the process page table index
+                        pageTable[i].dirtyBit[pageRequest] = permissionTokenInt; //store the permission; 1 indicates dirtyBit is set                            
 
-                                //implement frame swapping here
-                        }
+                        userMemoryRequest.msgtype = mtype; strcpy(userMemoryRequest.msgcontent, "1");
+                        msgsnderr = msgsnd(memoryRequestMessageQueueID, &userMemoryRequest, sizeof(userMemoryRequest), IPC_NOWAIT);   //send message granted to user process
+                        snprintf(logstring, sizeof(logstring), "\n Master: %s permission granted to PID %s on memory address %s in Frame %d at %hu:%hu\n", permission, userIDToken, memoryAddressToken, lastFIFOCount-1, *osstimeseconds, *osstimenanoseconds+=14);
+
+                        logmsg(logfilename, logstring); //calling logmsg() to write to file   
+                        break;
                     }
                 }//end of page fault if block
 
@@ -336,7 +352,7 @@ int main(int argc, char *argv[]){   //start of main() function
 
                         printf("No Page fault; Master sending message type %d and message content %s to user process\n", userMemoryRequest.msgtype, userMemoryRequest.msgcontent);
 
-                        sleep(5);
+                        sleep(3);
 
                         msgsnderr = msgsnd(memoryRequestMessageQueueID, &userMemoryRequest, sizeof(userMemoryRequest), IPC_NOWAIT);   //send message granted to user process  
 
@@ -363,7 +379,6 @@ int main(int argc, char *argv[]){   //start of main() function
     return 0;
 
 }   //end of main function
-
 
 //initclock() function initializes the ossclock 
 
@@ -402,22 +417,18 @@ void cleanUp(void){ //frees up used resources including shared memory
     logmsg(logfilename, logstring);
     printf("%s", logstring);
 
-        for (int index = 0; index < max_number_of_processes; index++){
+    for (int index = 0; index < max_number_of_processes; index++){
 
-                if (processID[index] > 0){    //if there a process ID in this location
+            if (pageTable[index].pID > 0){    //if there a process ID in this location
 
-                    //sprintf(pidToString, "%d", processID[index]);   //convert process id to string
-
-                    //printf("\nStopping user process %d\n", processID[index]);
-
-                    //snprintf(logstring, sizeof(logstring), "\nMaster stopping Process %s at %hu:%hu\n", pidToString, *osstimeseconds, *osstimenanoseconds+=1);
-                    //logmsg(logfilename, logstring);
-
-                    kill(processID[index], SIGKILL);
-                }
-        }
+                sprintf(pidToString, "%d", pageTable[index].pID);   //convert process id to string
+                snprintf(logstring, sizeof(logstring), "\nMaster stopping PID %s at %hu:%hu", pidToString, *osstimeseconds, *osstimenanoseconds+=1);
+                logmsg(logfilename, logstring);
+                kill(pageTable[index].pID, SIGKILL);
+            }
+    }
     strcpy(logstring, "");
-    snprintf(logstring, sizeof(logstring), "\nMaster stopped all pending user processes at %hu:%hu\n", *osstimeseconds+=2, *osstimenanoseconds+=10);
+    snprintf(logstring, sizeof(logstring), "\nMaster stopped all pending user processes at %hu:%hu\n", *osstimeseconds, *osstimenanoseconds+=1);
     logmsg(logfilename, logstring);
     printf("%s", logstring);
     ossofflinesecondclock = *osstimeseconds; ossofflinenanosecondclock = *osstimenanoseconds; //save the clock before detaching from clock shared memory
@@ -455,7 +466,6 @@ void cleanUp(void){ //frees up used resources including shared memory
 
 
 }   //end of cleanUP()
-
 
 void siginthandler(int sigint){
 
@@ -505,7 +515,7 @@ void displayFrameTable(void){   //function to display the frame table
     logmsg(logfilename, logstring); //calling logmsg() to write to file
 
     strcpy(logstring, "");
-    for (int i = 0; i < 20; i++){
+    for (int i = 0; i < 256; i++){
 
         printf("\nindex is %d, owner is %d and permission is %d", i, frameTable.frameIndex[i], frameTable.framePermission[i]);
         sprintf(indexToString, "%d", i); //converts int to string
@@ -525,4 +535,37 @@ void displayFrameTable(void){   //function to display the frame table
         strcat(logstring, permissionToString); strcat(logstring, "\n");
     }
     logmsg(logfilename, logstring); //calling logmsg() to write to file
-}
+}   //end of displayFrameTable()
+
+int swapFrame(void){
+
+    int processID = 0;  //stores the process ID currently using the frame we want to swap
+    int pageNumber;
+
+    if (lastFIFOCount == 256)    //lastFIFOCount represents the frame we want to swap and we use FIFO scheme
+        lastFIFOCount = 0;  //reset lastFIFOCount since the Frame Table is 0 to 255
+
+    processID = frameTable.frameIndex[lastFIFOCount];   //this is the PID inside the frame we want to swap
+
+    for (int i = 0; i < max_number_of_processes; i++){  //find the process in process Table and reset its page table to indicate the corresponding frame has been swapped
+
+        if (pageTable[i].pID == processID){
+
+            for (int index = 0; index < 32; index++){   //find the page referenceing the frame being swapped
+
+                if (pageTable[i].pageNumber[index] == lastFIFOCount){   //check if the page number stores the Frame number being swapped
+
+                    pageNumber = index;
+                    pageTable[i].pageNumber[index] = -1;    //put the default value back in this location to indicate frame is no longer available
+                    pageTable[i].dirtyBit[index] = 0;   //reset its corresponding dirty bit
+                    break;  //break out of loop if page has been found and frame swapped
+                }
+            }
+            break;  //break out of the outer loop if the processID has been found in the process table
+        }
+    }
+    snprintf(logstring, sizeof(logstring), "\nMaster: Swapping Frame %d referenced by Page %d of PID %d at %hu:%hu\n", lastFIFOCount, pageNumber, processID, *osstimeseconds, *osstimenanoseconds);
+    logmsg(logfilename, logstring); //calling logmsg() to write to file
+    lastFIFOCount++;    //inceremnt FIFO count for the next swappable frame
+    return 0;
+}   //end of swapFrame()

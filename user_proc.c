@@ -135,7 +135,7 @@ int main(int argc, char *argv[]){
 
             printf("\nMemory address %d with %s permission granted by Master to Process %d\n", memoryAddress, permission, getpid());
         
-            int rnd = randomNumber(800, 1100);  //generate a random number to decide whether to terminate or continue to request memory addresses
+            int rnd = randomNumber(100, 1100);  //generate a random number to decide whether to terminate or continue to request memory addresses
 
             if (rnd > 900){ //this is a condition to terminate by sending -1 as permission to oss
 
@@ -161,5 +161,5 @@ int main(int argc, char *argv[]){
     }
 
     printf("\nProcess %d completed user process execution\n", getpid());
-    return 0;
+    exit(0);
 }
