@@ -166,6 +166,7 @@ int main(int argc, char *argv[]){   //start of main() function
 
             pageTable[count].pID = pid; //set the pid in the process_page table
             numberOfProcesses++;    //tracks the total number of process created so far
+            printf("\nTotal number of processes is %d\n", numberOfProcesses);
         }
 
         if (pid == 0){  //child process was created
@@ -186,7 +187,7 @@ int main(int argc, char *argv[]){   //start of main() function
 
     while (1){
 
-        displayFrameTable(20);  //change this argument for how many frames to display
+        displayFrameTable(30);  //change this argument for how many frames to display
 
         printf("\nMaster listening for memory request or process termination\n");
 
@@ -237,7 +238,7 @@ int main(int argc, char *argv[]){   //start of main() function
             float avgMemoryAccessSpeed, totalMemoryAccessTime; char frameToString[5];
 
             strcpy(permission, "termination");
-            kill(strtol(userIDToken,NULL,10), SIGKILL); //be sure to kill the child process
+            //kill(strtol(userIDToken,NULL,10), SIGKILL); //be sure to kill the child process
             snprintf(logstring, sizeof(logstring), "\nMaster: PID %s has informed Master of its termination at %hu:%hu\n", userIDToken, *osstimeseconds, *osstimenanoseconds+=5);
             logmsg(logfilename, logstring); //calling logmsg() to write to file
 
@@ -266,17 +267,17 @@ int main(int argc, char *argv[]){   //start of main() function
                     for (int index = 0; index < 32; index++){   //traverse the page table to clear the dirtyBit and free the corresponding frames inside page table
 
                         pageTable[i].dirtyBit[index] = 0;   //clear the dirtyBit
-                        if (pageTable[i].pageNumber[index] > -1){   //if a frame address is tored in the page table location
+                        if (pageTable[i].pageNumber[index] > -1){   //if a frame address is stored in the page table location
 
                             frameTable.frameIndex[pageTable[i].pageNumber[index]] = -1; //reset the frame
                             frameTable.framePermission[pageTable[i].pageNumber[index]] = -1;    //reset the corresponding frame permission
                             frameTable.frameFIFO[pageTable[i].pageNumber[index]] = 0;   //reset the fifo counter
                             sprintf(frameToString, "%d", pageTable[i].pageNumber[index]);
-                            strcat(logstring, frameToString); strcat(logstring, ", ");
+                            strcat(logstring, frameToString); strcat(logstring, ", "); strcpy(frameToString, "");
                         }
                     } 
                     pageTable[i].pID = 0; //reset the Process ID to the default
-                    strcat(logstring, " have been freed in the Frame Table\n")                   ;
+                    strcat(logstring, "have been freed in the Frame Table\n")                   ;
                     logmsg(logfilename, logstring); //calling logmsg() to write to file
                     break;
                 }
@@ -377,7 +378,7 @@ int main(int argc, char *argv[]){   //start of main() function
 
         else if(userProcessReturn > 0){
 
-            snprintf(logstring, sizeof(logstring), "\nMaster: Master created a new PID %d at %hu:%hu\n", userProcessReturn,  *osstimeseconds, *osstimenanoseconds);
+            snprintf(logstring, sizeof(logstring), "\nMaster: Master created process number %d ; PID %d at %hu:%hu\n", numberOfProcesses, userProcessReturn,  *osstimeseconds, *osstimenanoseconds);
             logmsg(logfilename, logstring); //calling logmsg() to write to file             
         }
         else if(userProcessReturn == 0){

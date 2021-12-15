@@ -31,7 +31,7 @@ int main(int argc, char *argv[]){
     ossclkid = shmget(ossclockkey, 8, 0); //gets the id of the shared memory clock
     ossclockaddr = shmat(ossclkid, NULL, 0); //shmat returns the address of the shared memory
 
-    int memoryAddress, memoryPermission, masterPID; 
+    int memoryAddress, memoryPermission, masterPID; int rnd;
     char memoryAddressToString[6], memoryPermissionToString[2], completeMemoryAddress[20], permission[6], userPIDToSTring[7], masterPIDToString[7];
 
     struct msgqueue resourceMessageChild;    //to communicate memory request and termination messages with the master
@@ -113,30 +113,31 @@ int main(int argc, char *argv[]){
             printf("\nMemory access not granted by Master...User Process %d in blocked state\n", getpid());
 
             //implement blocked state condition here, keep waiting to receive a memory resource grant
-                while(1){
+            while(1){
 
-                    msgrcverror = msgrcv(resourceMessageID, &resourceMessageChild, sizeof(resourceMessageChild), getpid(), 0); //receive message back from master  
+                msgrcverror = msgrcv(resourceMessageID, &resourceMessageChild, sizeof(resourceMessageChild), getpid(), 0); //receive message back from master  
 
-                    if (msgrcverror == -1){ //error checking msgrcverror()
+                if (msgrcverror == -1){ //error checking msgrcverror()
 
-                        perror("\nError: In user_proc() blocked state. msgrcv() failed!");
+                    perror("\nError: In user_proc() blocked state. msgrcv() failed!");
 
-                        exit(1);
-                    }
-                    if (strcmp(resourceMessageChild.msgcontent, "0") == 0)  //if still blocked
-                        continue;
-                    else
-                        break;
+                    exit(1);
                 }
-                printf("\nMemory access now granted by Master...User Process %d out of blocked state\n", getpid());
-        } 
+                if (strcmp(resourceMessageChild.msgcontent, "0") == 0)  //if still blocked go back and continue waiting
+                    continue;
 
-        else if (strcmp(msgreceived, "1") == 0){ //if memory is granted
+                else{
+                    strcpy(msgreceived, resourceMessageChild.msgcontent);   //copy 1 into msgreceived and compare below
+                    break;
+                }
+            }                    
+        }   
+        if (strcmp(msgreceived, "1") == 0){ //if memory is granted
 
             printf("\nMemory address %d with %s permission granted by Master to Process %d\n", memoryAddress, permission, getpid());
         
-            int rnd = randomNumber(100, 1100);  //generate a random number to decide whether to terminate or continue to request memory addresses
-
+            rnd = randomNumber(100, 1100);  //generate a random number to decide whether to terminate or continue to request memory addresses
+            printf("\nuser random number is %d\n", rnd);
             if (rnd > 900){ //this is a condition to terminate by sending -1 as permission to oss
 
                 strcpy(completeMemoryAddress, "");
@@ -149,7 +150,6 @@ int main(int argc, char *argv[]){
                 if (msgsnderror == -1){ //error checking msgsnd()
 
                     perror("\nError: In user_proc(). msgsnd() failed!");
-
                     exit(1);
                 }
                 printf("\nprocess %d is terminating at %hu:%hu\n", getpid(), *osstimesec, *osstimensec);
