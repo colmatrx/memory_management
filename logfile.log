@@ -26545,3 +26545,442 @@ Master Clock Shared Memory ID 34 has been detached and deleted at 9:27210
 Master removed Messaqe Queue ID 6 at 9:27225
 
 Master terminating at 10:27230
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:53960
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID -1				
+	1					PID -1				
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 2:53960
+
+Master: PID 7500 is requesting read of memory address 5900 at 2:53965
+
+Master: Page Fault; Memory Address 5900 not in Frame Table; Process 7500 is considered blocked at 2:53966
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:53966
+
+ Master: read permission granted to PID 7500 on memory address 5900 in Frame 0 at 2:53980
+
+Master Displaying Frame Table at 2:53980
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 7500				read
+	1					PID -1				
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 3:53980
+
+Master: PID 7501 is requesting read of memory address 12648 at 3:53985
+
+Master: Page Fault; Memory Address 12648 not in Frame Table; Process 7501 is considered blocked at 3:53986
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:53986
+
+ Master: read permission granted to PID 7501 on memory address 12648 in Frame 1 at 3:54000
+
+Master Displaying Frame Table at 3:54000
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 7500				read
+	1					PID 7501				read
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 4:54000
+
+Master: PID 7514 is requesting read of memory address 8584 at 4:54005
+
+Master: Page Fault; Memory Address 8584 not in Frame Table; Process 7514 is considered blocked at 4:54006
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 4:54006
+
+ Master: read permission granted to PID 7514 on memory address 8584 in Frame 2 at 4:54020
+
+Master Displaying Frame Table at 4:54020
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 7500				read
+	1					PID 7501				read
+	2					PID 7514				read
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 5:54020
+
+Master: PID 7518 is requesting write of memory address 8734 at 5:54025
+
+Master timed out at 6:54030
+Master cleaning up resources at 6:54035
+
+Master stopping all pending user processes at 6:54037
+
+Master stopping PID 7500 at 6:54038
+Master stopping PID 7501 at 6:54039
+Master stopping PID 7514 at 6:54040
+Master stopping PID 7518 at 6:54041
+Master stopping PID 7519 at 6:54042
+Master stopping PID 7520 at 6:54043
+Master stopping PID 7521 at 6:54044
+Master stopping PID 7522 at 6:54045
+Master stopping PID 7523 at 6:54046
+Master stopping PID 7524 at 6:54047
+Master stopping PID 7525 at 6:54048
+Master stopping PID 7526 at 6:54049
+Master stopping PID 7527 at 6:54050
+Master stopping PID 7528 at 6:54051
+Master stopping PID 7529 at 6:54052
+Master stopping PID 7530 at 6:54053
+Master stopping PID 7531 at 6:54054
+Master stopping PID 7532 at 6:54055
+Master stopped all pending user processes at 6:54056
+
+Master Clock Shared Memory ID 32786 has been detached and deleted at 7:54081
+
+Master removed Messaqe Queue ID 7 at 7:54096
+
+Master terminating at 8:54101
+Master clock initializing at 0:0
+
+Master clock completed initialization at 0:200
+
+Master randomly generating user processes at 1:200 ......
+
+Master Displaying Frame Table at 1:11720
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID -1				
+	1					PID -1				
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 2:11720
+
+Master: PID 20526 is requesting read of memory address 11228 at 2:11725
+
+Master: Page Fault; Memory Address 11228 not in Frame Table; Process 20526 is considered blocked at 2:11726
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 2:11726
+
+ Master: read permission granted to PID 20526 on memory address 11228 in Frame 0 at 2:11740
+
+Master: Master created a new PID 20534 at 2:6108
+
+Master Displaying Frame Table at 2:6108
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 20526				read
+	1					PID -1				
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 3:6108
+
+Master: PID 20527 is requesting read of memory address 29692 at 3:6113
+
+Master: Page Fault; Memory Address 29692 not in Frame Table; Process 20527 is considered blocked at 3:6114
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 3:6114
+
+ Master: read permission granted to PID 20527 on memory address 29692 in Frame 1 at 3:6128
+
+Master: Master created a new PID 20535 at 3:22768
+
+Master Displaying Frame Table at 3:22768
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 20526				read
+	1					PID 20527				read
+	2					PID -1				
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 4:22768
+
+Master: PID 20528 is requesting read of memory address 29610 at 4:22773
+
+Master: Page Fault; Memory Address 29610 not in Frame Table; Process 20528 is considered blocked at 4:22774
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 4:22774
+
+ Master: read permission granted to PID 20528 on memory address 29610 in Frame 2 at 4:22788
+
+Master: Master created a new PID 20536 at 4:46084
+
+Master Displaying Frame Table at 4:46084
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 20526				read
+	1					PID 20527				read
+	2					PID 20528				read
+	3					PID -1				
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 5:46084
+
+Master: PID 20532 is requesting read of memory address 10964 at 5:46089
+
+Master: Page Fault; Memory Address 10964 not in Frame Table; Process 20532 is considered blocked at 5:46090
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 5:46090
+
+ Master: read permission granted to PID 20532 on memory address 10964 in Frame 3 at 5:46104
+
+Master: Master created a new PID 20537 at 5:4376
+
+Master Displaying Frame Table at 5:4376
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 20526				read
+	1					PID 20527				read
+	2					PID 20528				read
+	3					PID 20532				read
+	4					PID -1				
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 6:4376
+
+Master: PID 20533 is requesting read of memory address 21124 at 6:4381
+
+Master: Page Fault; Memory Address 21124 not in Frame Table; Process 20533 is considered blocked at 6:4382
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 6:4382
+
+ Master: read permission granted to PID 20533 on memory address 21124 in Frame 4 at 6:4396
+
+Master: Master created a new PID 20546 at 6:2092
+
+Master Displaying Frame Table at 6:2092
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 20526				read
+	1					PID 20527				read
+	2					PID 20528				read
+	3					PID 20532				read
+	4					PID 20533				read
+	5					PID -1				
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 7:2092
+
+Master: PID 20534 is requesting write of memory address 14181 at 7:2097
+
+Master: Page Fault; Memory Address 14181 not in Frame Table; Process 20534 is considered blocked at 7:2098
+
+Master: Empty Frame found, no sawpping needed; Fetching data from secondary storage at 7:2098
+
+ Master: write permission granted to PID 20534 on memory address 14181 in Frame 5 at 7:2112
+
+Master: Master created a new PID 20547 at 7:6208
+
+Master Displaying Frame Table at 7:6208
+
+|Frame Index|		|  Frame Owner |		|Frame Permission|
+	0					PID 20526				read
+	1					PID 20527				read
+	2					PID 20528				read
+	3					PID 20532				read
+	4					PID 20533				read
+	5					PID 20534				write
+	6					PID -1				
+	7					PID -1				
+	8					PID -1				
+	9					PID -1				
+	10					PID -1				
+	11					PID -1				
+	12					PID -1				
+	13					PID -1				
+	14					PID -1				
+	15					PID -1				
+	16					PID -1				
+	17					PID -1				
+	18					PID -1				
+	19					PID -1				
+
+Master: Listening for Memory Access Requests 8:6208
+
+Master: PID 20535 is requesting read of memory address 21105 at 8:6213
+
+Master timed out at 9:6218
+Master cleaning up resources at 9:6223
+
+Master stopping all pending user processes at 9:6225
+
+Master stopping PID 20526 at 9:6226
+Master stopping PID 20527 at 9:6227
+Master stopping PID 20528 at 9:6228
+Master stopping PID 20532 at 9:6229
+Master stopping PID 20533 at 9:6230
+Master stopping PID 20534 at 9:6231
+Master stopping PID 20535 at 9:6232
+Master stopping PID 20536 at 9:6233
+Master stopping PID 20537 at 9:6234
+Master stopping PID 20546 at 9:6235
+Master stopping PID 20547 at 9:6236
+Master stopped all pending user processes at 9:6237
+
+Master Clock Shared Memory ID 32791 has been detached and deleted at 10:6262
+
+Master removed Messaqe Queue ID 8 at 10:6277
+
+Master terminating at 11:6282

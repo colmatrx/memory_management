@@ -57,15 +57,17 @@ void siginthandler(int);    //handles Ctrl+C interrupt
 
 void timeouthandler(int sig);   //timeout handler function declaration
 
-void displayFrameTable(void);   //function to dsiplay the frame table
+void displayFrameTable(int);   //function to dsiplay the frame table
 
 int swapFrame(void);    //function to swap the frame using FIFO
+
+int forkUserProcess();  //creates user process
 
 unsigned int ossclockid, *ossclockaddress, *osstimeseconds, *osstimenanoseconds; //used for ossclock shared memory
 
 unsigned int ossofflinesecondclock; unsigned int ossofflinenanosecondclock; //used as offline clock before detaching from the oss clock shared memory
 
-int randomTime; int lastFIFOCount = 0;
+int randomTime; int lastFIFOCount = 0; int numberOfProcesses = 0; int pid; 
 
 char *logfilename = "logfile.log"; char logstring[4096]; 
 
@@ -75,7 +77,7 @@ int main(int argc, char *argv[]){   //start of main() function
 
     char *resourceNum, *resourceID; char *userIDToken, *memoryAddressToken, *permissionToken;
 
-    long int mtype; int pid; int pidIndex; int fifoCount = 0; int swapBit;
+    long int mtype; int pidIndex; int fifoCount = 0; int swapBit; int userProcessReturn;
 
     signal(SIGINT, siginthandler); //handles Ctrl+C signal inside OSS only     
 
@@ -151,7 +153,7 @@ int main(int argc, char *argv[]){   //start of main() function
 
     printf("%s", logstring);
     
-    for (int count = 0; count < max_number_of_processes; count++){       //randomly create user processes in this block
+    for (int count = 0; count < 5; count++){       //randomly create 10 user processes in the beginning
 
         pid = fork();
 
@@ -163,6 +165,7 @@ int main(int argc, char *argv[]){   //start of main() function
         if (pid > 0){
 
             pageTable[count].pID = pid; //set the pid in the process_page table
+            numberOfProcesses++;    //tracks the total number of process created so far
         }
 
         if (pid == 0){  //child process was created
@@ -183,7 +186,7 @@ int main(int argc, char *argv[]){   //start of main() function
 
     while (1){
 
-        displayFrameTable();
+        displayFrameTable(20);  //change this argument for how many frames to display
 
         printf("\nMaster listening for memory request or process termination\n");
 
@@ -367,10 +370,23 @@ int main(int argc, char *argv[]){   //start of main() function
             }
             
         }
+        //call forkUserProcess here
+        userProcessReturn = forkUserProcess();  //randomly fork a new process herwe
+        if (userProcessReturn == -1)
+            break;  //break if 100 processes have been run
 
+        else if(userProcessReturn > 0){
+
+            snprintf(logstring, sizeof(logstring), "\nMaster: Master created a new PID %d at %hu:%hu\n", userProcessReturn,  *osstimeseconds, *osstimenanoseconds);
+            logmsg(logfilename, logstring); //calling logmsg() to write to file             
+        }
+        else if(userProcessReturn == 0){
+            snprintf(logstring, sizeof(logstring), "\nMaster: Process table is full, no new process created at %hu:%hu\n", *osstimeseconds, *osstimenanoseconds);
+            logmsg(logfilename, logstring); //calling logmsg() to write to file   
+        }
     }
 
-    //cleanUp();      //call cleanup before exiting main() to free up used resources*/
+    cleanUp();      //call cleanup before exiting main() to free up used resources*/
 
     snprintf(logstring, sizeof(logstring), "\nMaster: No more requests. Master completed execution at %hu:%hu\n", ossofflinesecondclock+=1, ossofflinenanosecondclock+=05);
 
@@ -464,7 +480,6 @@ void cleanUp(void){ //frees up used resources including shared memory
     snprintf(logstring, sizeof(logstring), "\nMaster removed Messaqe Queue ID %d at %hu:%hu\n", memoryRequestMessageQueueID, ossofflinesecondclock, ossofflinenanosecondclock+=15);
     logmsg(logfilename, logstring);
 
-
 }   //end of cleanUP()
 
 void siginthandler(int sigint){
@@ -502,7 +517,7 @@ void timeouthandler(int sig){   //this function is called if the program times o
 
 }   //end of timeouthandler()
 
-void displayFrameTable(void){   //function to display the frame table
+void displayFrameTable(int numberOfFrames){   //function to display the frame table
 
     char indexToString[14]; char ownerToString[14]; char permissionToString[19];
  
@@ -515,7 +530,7 @@ void displayFrameTable(void){   //function to display the frame table
     logmsg(logfilename, logstring); //calling logmsg() to write to file
 
     strcpy(logstring, "");
-    for (int i = 0; i < 256; i++){
+    for (int i = 0; i < numberOfFrames; i++){
 
         printf("\nindex is %d, owner is %d and permission is %d", i, frameTable.frameIndex[i], frameTable.framePermission[i]);
         sprintf(indexToString, "%d", i); //converts int to string
@@ -569,3 +584,47 @@ int swapFrame(void){
     lastFIFOCount++;    //inceremnt FIFO count for the next swappable frame
     return 0;
 }   //end of swapFrame()
+
+int forkUserProcess(){
+
+        int processID;
+        if (numberOfProcesses == 100)   //return -1 if the total number ofprocesses created is 100
+            return -1;
+
+        for (int i = 0; i < max_number_of_processes; i++){  //create a user process if there is room in the process table
+
+            if (pageTable[i].pID == 0){
+
+                pid = fork();
+
+                if (pid < 0){
+                        perror("\nError: Master in main() function. fork() failed!");
+                        exit(1);
+                    }
+
+                if (pid > 0){
+
+                    pageTable[i].pID = pid; //set the pid in the process_page table
+                    processID = pid;
+                    numberOfProcesses++;
+                }
+
+                if (pid == 0){  //child process was created
+
+                    printf("\nUser Process %d was created\n", getpid());
+
+                    execl("./user_proc", "./user_proc", NULL);      //execute user process
+                }
+
+                randomTime = randomNumber(1,500);    //generate random number between 1 and 500ms
+
+                randomTime = randomTime * 100000000; //to nansosec
+
+                *osstimenanoseconds+=randomTime;    //increment oss nanosecond by randomTime
+
+                printf("\nMaster created User Process %d at %hu:%hu\n", pid, *osstimeseconds, *osstimenanoseconds);
+                return processID;  //only fork one process at a time so return the process ID and break here
+            }
+        }   
+    return 0;
+}
